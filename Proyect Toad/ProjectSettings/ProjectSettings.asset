@@ -591,8 +591,8 @@ PlayerSettings:
     UNet: 1
   facebookSdkVersion: 7.9.1
   apiCompatibilityLevel: 2
-  cloudProjectId: ba1f5238-b2fe-4770-8a5b-d49b3e2298fc
-  projectName: Proyect Toad
-  organizationId: slotheryplusblack
+  cloudProjectId: 
+  projectName: 
+  organizationId: 
   cloudEnabled: 0
   enableNewInputSystem: 0

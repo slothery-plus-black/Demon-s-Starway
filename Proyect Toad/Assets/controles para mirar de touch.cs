@@ -2,7 +2,7 @@
 
 public class controles : MonoBehaviour {
     
-    public ManagerSonido manager;
+    //public ManagerSonido manager;
 
     public int vidas = 3;
 
@@ -231,7 +231,7 @@ public class controles : MonoBehaviour {
                 Disparo(bala,pos);
                 municionK--;
             }else{
-                manager.ReproducirNoMunicion();
+                //manager.ReproducirNoMunicion();
             }
         }else{
             
@@ -240,13 +240,13 @@ public class controles : MonoBehaviour {
                 municionM--;
             }
             else{
-                manager.ReproducirNoMunicion();
+                //manager.ReproducirNoMunicion();
             }
         }
     }
 
     private void Disparo(GameObject bala, Transform pos){
-        manager.ReproducirSonidoBala();
+        //manager.ReproducirSonidoBala();
 
         GameObject ob = Instantiate<GameObject> (bala, pos);
         ob.GetComponent<Rigidbody>().velocity = dis * potenciaDisparo;
@@ -258,7 +258,7 @@ public class controles : MonoBehaviour {
     private void QuitarVida(){
         vidas--;
         if (vidas <= 0){
-            gameObject.AddComponent<CargadorNiveles>().Cargar("menuPrincipal");
+            //gameObject.AddComponent<CargadorNiveles>().Cargar("menuPrincipal");
             Destroy(gameObject);
         }
     }

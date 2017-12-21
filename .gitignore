@@ -6,9 +6,6 @@ Thumbs.db
 
 #Unity
 *.meta
-*.csproj
 **/Library/*
 */Temp/*
-Proyect Toad/Assets/BrokenVector/LowPolyShaders/Example/Example.unity
-Proyect Toad/Assets/BrokenVector/LowPolyShaders/Example/Materials/PBR_Color.mat
-Proyect Toad/Assets/BrokenVector/LowPolyShaders/Example/Materials/PBR_Metal.mat
+*.csproj

@@ -51,6 +51,8 @@
      <Compile Include="Assets\GravedadPorPartes.cs" />
      <Compile Include="Assets\antiguo\GravedadCircular.cs" />
      <Compile Include="Assets\controles para mirar de touch.cs" />
+     <None Include="Assets\BrokenVector\LowPolyShaders\Shaders\LowPolyPBRShader.shader" />
+     <None Include="Assets\BrokenVector\LowPolyShaders\Shaders\LowPolyUnlitShader.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity5.6/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

@@ -23,6 +23,8 @@ Thumbs.db
 *.unityproj
 *.booproj
 
+**/.vscode/*
+
 # OS Generated
 # ============
 .DS_Store

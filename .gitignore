@@ -1,15 +1,6 @@
-# Mac
-.DS_Store
-
-# Windows
-Thumbs.db
-
 #Unity
-*.meta
 **/Library/*
 */Temp/*
-*.csproj
-*.sln
 
 # Visual Studio / MonoDevelop generated
 # =====================================

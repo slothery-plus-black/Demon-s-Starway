@@ -9,3 +9,4 @@ Thumbs.db
 **/Library/*
 */Temp/*
 *.csproj
+*.sln

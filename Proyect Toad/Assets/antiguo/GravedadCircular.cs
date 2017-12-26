@@ -11,7 +11,7 @@ public class GravedadCircular : MonoBehaviour {
 
 	void FixedUpdate() {
 		foreach (GameObject o in objects) {
-			Rigidbody r = o.GetComponent<Rigidbody> ();
+			Rigidbody r = o.GetComponent<Rigidbody>();
 			r.AddForce((planet.transform.position - o.transform.position).normalized * gravitationalPull);
 		}
 	}

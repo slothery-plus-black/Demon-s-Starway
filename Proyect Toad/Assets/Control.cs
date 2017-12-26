@@ -92,13 +92,17 @@ public class Control : MonoBehaviour {
 				//movHorizontal = planeta.transform.right;
 				//movVertical = planeta.transform.forward;
 				movH.Add(cam.transform.right);
-				movV.Add(planeta.transform.forward);
+				Vector3 a = cam.transform.up + cam.transform.forward;
+				//a.y = 0;
+				movV.Add(a.normalized);
 			break;
 			case "-y":
 				//movHorizontal = planeta.transform.right;
 				//movVertical = -planeta.transform.forward;
 				movH.Add(cam.transform.right);
-				movV.Add(-planeta.transform.forward);
+				Vector3 a2 = cam.transform.up + cam.transform.forward;
+				//a2.y = 0;
+				movV.Add(-a2.normalized);
 			break;
 
 			case "z":
@@ -112,6 +116,27 @@ public class Control : MonoBehaviour {
 				//movVertical = planeta.transform.up;
 				movH.Add(planeta.transform.right);
 				movV.Add(planeta.transform.up);
+			break;
+		}
+	}
+
+	void OnTriggerStay(Collider other){
+		switch (other.gameObject.name){
+			case "y":
+				//movHorizontal = planeta.transform.right;
+				//movVertical = planeta.transform.forward;
+				movH[0] = (cam.transform.right);
+				Vector3 a = cam.transform.up + cam.transform.forward;
+				//a.y = 0;
+				movV[0] = (a.normalized);
+			break;
+			case "-y":
+				//movHorizontal = planeta.transform.right;
+				//movVertical = -planeta.transform.forward;
+				movH[0] = (cam.transform.right);
+				Vector3 a2 = cam.transform.up + cam.transform.forward;
+				//a.y = 0;
+				movV[0] = (a2.normalized);
 			break;
 		}
 	}

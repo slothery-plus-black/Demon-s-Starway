@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direccion: {x: 0.33333334, y: 0.33333334, z: -0.33333334}
-  fuerzaGravitatoria: 5
+  fuerzaGravitatoria: 10
 --- !u!65 &166736173
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -238,6 +238,7 @@ GameObject:
   - component: {fileID: 328938454}
   - component: {fileID: 328938456}
   - component: {fileID: 328938455}
+  - component: {fileID: 328938457}
   m_Layer: 0
   m_Name: -x
   m_TagString: Untagged
@@ -270,7 +271,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direccion: {x: 1, y: 0, z: 0}
-  fuerzaGravitatoria: 5
+  fuerzaGravitatoria: 10
 --- !u!65 &328938456
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -283,6 +284,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &328938457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 328938453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c75ccc0e55c613d4d82854fe78a8fc77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  caras:
+  - z
+  - y
+  direccionEnCara: {x: 0, y: 1, z: -1}
 --- !u!1 &459800204
 GameObject:
   m_ObjectHideFlags: 0
@@ -325,7 +341,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direccion: {x: -0.33333334, y: 0.33333334, z: 0.33333334}
-  fuerzaGravitatoria: 5
+  fuerzaGravitatoria: 10
 --- !u!65 &459800207
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -380,7 +396,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direccion: {x: -0.33333334, y: -0.33333334, z: 0.33333334}
-  fuerzaGravitatoria: 5
+  fuerzaGravitatoria: 10
 --- !u!65 &462226494
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -411,7 +427,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!54 &572197356
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -533,7 +549,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direccion: {x: 0, y: -0.5, z: 0.5}
-  fuerzaGravitatoria: 5
+  fuerzaGravitatoria: 10
 --- !u!65 &591055622
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -564,7 +580,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!54 &599229916
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -686,7 +702,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direccion: {x: -0.33333334, y: 0.33333334, z: -0.33333334}
-  fuerzaGravitatoria: 5
+  fuerzaGravitatoria: 10
 --- !u!65 &799733607
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -717,7 +733,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &916215861
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -816,7 +832,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!54 &937842957
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -938,7 +954,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direccion: {x: 0.5, y: 0, z: -0.5}
-  fuerzaGravitatoria: 5
+  fuerzaGravitatoria: 10
 --- !u!65 &940856129
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -961,6 +977,7 @@ GameObject:
   - component: {fileID: 990644359}
   - component: {fileID: 990644361}
   - component: {fileID: 990644360}
+  - component: {fileID: 990644362}
   m_Layer: 0
   m_Name: y
   m_TagString: Untagged
@@ -993,7 +1010,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direccion: {x: 0, y: -1, z: 0}
-  fuerzaGravitatoria: 5
+  fuerzaGravitatoria: 10
 --- !u!65 &990644361
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1006,6 +1023,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &990644362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 990644358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c75ccc0e55c613d4d82854fe78a8fc77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  caras:
+  - z
+  - x
+  direccionEnCara: {x: 1, y: 0, z: 1}
 --- !u!1 &1041649748
 GameObject:
   m_ObjectHideFlags: 0
@@ -1089,7 +1121,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1041649748}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -25}
+  m_LocalPosition: {x: 0, y: 1, z: -15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1252403681}
@@ -1137,7 +1169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direccion: {x: -0.33333334, y: -0.33333334, z: -0.33333334}
-  fuerzaGravitatoria: 5
+  fuerzaGravitatoria: 10
 --- !u!65 &1060768347
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1192,7 +1224,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direccion: {x: 0, y: 0.5, z: -0.5}
-  fuerzaGravitatoria: 5
+  fuerzaGravitatoria: 10
 --- !u!65 &1063393040
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1215,6 +1247,7 @@ GameObject:
   - component: {fileID: 1084613732}
   - component: {fileID: 1084613734}
   - component: {fileID: 1084613733}
+  - component: {fileID: 1084613735}
   m_Layer: 0
   m_Name: x
   m_TagString: Untagged
@@ -1247,7 +1280,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direccion: {x: -1, y: 0, z: 0}
-  fuerzaGravitatoria: 5
+  fuerzaGravitatoria: 10
 --- !u!65 &1084613734
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1260,6 +1293,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1084613735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1084613731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c75ccc0e55c613d4d82854fe78a8fc77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  caras:
+  - z
+  - y
+  direccionEnCara: {x: 1, y: 1, z: 0}
 --- !u!1 &1136387062
 GameObject:
   m_ObjectHideFlags: 0
@@ -1270,6 +1318,7 @@ GameObject:
   - component: {fileID: 1136387063}
   - component: {fileID: 1136387065}
   - component: {fileID: 1136387064}
+  - component: {fileID: 1136387066}
   m_Layer: 0
   m_Name: -z
   m_TagString: Untagged
@@ -1302,7 +1351,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direccion: {x: 0, y: 0, z: 1}
-  fuerzaGravitatoria: 5
+  fuerzaGravitatoria: 10
 --- !u!65 &1136387065
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1315,6 +1364,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1136387066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1136387062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c75ccc0e55c613d4d82854fe78a8fc77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  caras:
+  - 
+  - 
+  - 
+  direccionEnCara: {x: 0, y: 0, z: 0}
 --- !u!1 &1146690063
 GameObject:
   m_ObjectHideFlags: 0
@@ -1357,7 +1422,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direccion: {x: -0.5, y: 0, z: 0.5}
-  fuerzaGravitatoria: 5
+  fuerzaGravitatoria: 10
 --- !u!65 &1146690066
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1411,8 +1476,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30907ae38ef5f014b9df7e02a167d4ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jugador: {fileID: 1982785561}
   speedH: 2
   speedV: 2
+  fuerza: 5
 --- !u!1 &1287483398
 GameObject:
   m_ObjectHideFlags: 0
@@ -1455,7 +1522,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direccion: {x: 0, y: 0.5, z: 0.5}
-  fuerzaGravitatoria: 5
+  fuerzaGravitatoria: 10
 --- !u!65 &1287483401
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1486,7 +1553,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!54 &1335021559
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1584,7 +1651,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &1381820624
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1706,7 +1773,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direccion: {x: 0.5, y: 0, z: 0.5}
-  fuerzaGravitatoria: 5
+  fuerzaGravitatoria: 10
 --- !u!65 &1469622709
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1729,6 +1796,7 @@ GameObject:
   - component: {fileID: 1645910959}
   - component: {fileID: 1645910961}
   - component: {fileID: 1645910960}
+  - component: {fileID: 1645910962}
   m_Layer: 0
   m_Name: z
   m_TagString: Untagged
@@ -1761,7 +1829,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direccion: {x: 0, y: 0, z: -1}
-  fuerzaGravitatoria: 5
+  fuerzaGravitatoria: 10
 --- !u!65 &1645910961
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1774,6 +1842,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1645910962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1645910958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c75ccc0e55c613d4d82854fe78a8fc77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  caras:
+  - 
+  - 
+  - 
+  direccionEnCara: {x: 0, y: 0, z: 0}
 --- !u!1 &1675939572
 GameObject:
   m_ObjectHideFlags: 0
@@ -1816,7 +1900,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direccion: {x: 0.33333334, y: -0.33333334, z: 0.33333334}
-  fuerzaGravitatoria: 5
+  fuerzaGravitatoria: 10
 --- !u!65 &1675939575
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1925,7 +2009,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direccion: {x: 0.5, y: 0.5, z: 0}
-  fuerzaGravitatoria: 5
+  fuerzaGravitatoria: 10
 --- !u!65 &1721527828
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1980,7 +2064,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direccion: {x: -0.5, y: -0.5, z: 0}
-  fuerzaGravitatoria: 5
+  fuerzaGravitatoria: 10
 --- !u!65 &1769411785
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2035,7 +2119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direccion: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-  fuerzaGravitatoria: 5
+  fuerzaGravitatoria: 10
 --- !u!65 &1804983248
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2058,6 +2142,7 @@ GameObject:
   - component: {fileID: 1825963206}
   - component: {fileID: 1825963207}
   - component: {fileID: 1825963208}
+  - component: {fileID: 1825963209}
   m_Layer: 0
   m_Name: -y
   m_TagString: Untagged
@@ -2102,7 +2187,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direccion: {x: 0, y: 1, z: 0}
-  fuerzaGravitatoria: 5
+  fuerzaGravitatoria: 10
+--- !u!114 &1825963209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1825963205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c75ccc0e55c613d4d82854fe78a8fc77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  caras:
+  - z
+  - x
+  direccionEnCara: {x: -1, y: 0, z: -1}
 --- !u!1 &1952160785
 GameObject:
   m_ObjectHideFlags: 0
@@ -2145,7 +2245,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direccion: {x: -0.5, y: 0.5, z: 0}
-  fuerzaGravitatoria: 5
+  fuerzaGravitatoria: 10
 --- !u!65 &1952160788
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2200,7 +2300,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direccion: {x: 0, y: -0.5, z: -0.5}
-  fuerzaGravitatoria: 5
+  fuerzaGravitatoria: 10
 --- !u!65 &1970713105
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2213,6 +2313,129 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1982785561
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1982785567}
+  - component: {fileID: 1982785566}
+  - component: {fileID: 1982785565}
+  - component: {fileID: 1982785564}
+  - component: {fileID: 1982785563}
+  - component: {fileID: 1982785562}
+  - component: {fileID: 1982785568}
+  m_Layer: 0
+  m_Name: jugador
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1982785562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1982785561}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25c363a79b6ce1b4086a4f255c7a4f2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuerza: 0.1
+--- !u!54 &1982785563
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1982785561}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!23 &1982785564
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1982785561}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!135 &1982785565
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1982785561}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &1982785566
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1982785561}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1982785567
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1982785561}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.82, y: 3.16, z: -0.29}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1982785568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1982785561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50ebfee6dfce4c94f9303f506e11e4e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1986721407
 GameObject:
   m_ObjectHideFlags: 0
@@ -2231,7 +2454,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!54 &1986721408
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2353,7 +2576,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direccion: {x: -0.5, y: 0, z: -0.5}
-  fuerzaGravitatoria: 5
+  fuerzaGravitatoria: 10
 --- !u!65 &2019457146
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2384,7 +2607,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &2045021453
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2522,7 +2745,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 72df10aada4798349b0e2f22e7ccb3c3, type: 2}
+  - {fileID: 2100000, guid: 53877e8b3ee21364d8532d600a47d809, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2556,7 +2779,7 @@ Transform:
   m_GameObject: {fileID: 2054631995}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children:
   - {fileID: 1695292842}
   m_Father: {fileID: 0}
@@ -2580,7 +2803,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!54 &2055574657
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2702,7 +2925,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direccion: {x: 0.33333334, y: -0.33333334, z: -0.33333334}
-  fuerzaGravitatoria: 5
+  fuerzaGravitatoria: 10
 --- !u!65 &2058679748
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2757,7 +2980,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direccion: {x: 0.5, y: -0.5, z: 0}
-  fuerzaGravitatoria: 5
+  fuerzaGravitatoria: 10
 --- !u!65 &2089507938
 BoxCollider:
   m_ObjectHideFlags: 0

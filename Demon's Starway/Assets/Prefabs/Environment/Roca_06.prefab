@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4209482038626844}
   - component: {fileID: 95957298554108028}
+  - component: {fileID: 64697161332683878}
   m_Layer: 0
   m_Name: Roca_06
   m_TagString: Untagged
@@ -37,6 +38,7 @@ GameObject:
   - component: {fileID: 4910779967770130}
   - component: {fileID: 33830647325354292}
   - component: {fileID: 23197440389085432}
+  - component: {fileID: 64534613133516332}
   m_Layer: 0
   m_Name: Piedra007
   m_TagString: Untagged
@@ -54,6 +56,7 @@ GameObject:
   - component: {fileID: 4169830163425924}
   - component: {fileID: 33846834786822184}
   - component: {fileID: 23059898051368302}
+  - component: {fileID: 64544420934866626}
   m_Layer: 0
   m_Name: Piedra004
   m_TagString: Untagged
@@ -180,6 +183,48 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1714134706580860}
   m_Mesh: {fileID: 4300000, guid: 6e02b91dd1986f943a84e8ed8f3cd2a2, type: 3}
+--- !u!64 &64534613133516332
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1637070643591074}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300002, guid: 6e02b91dd1986f943a84e8ed8f3cd2a2, type: 3}
+--- !u!64 &64544420934866626
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1714134706580860}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: 6e02b91dd1986f943a84e8ed8f3cd2a2, type: 3}
+--- !u!64 &64697161332683878
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1585169529253528}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 0}
 --- !u!95 &95957298554108028
 Animator:
   serializedVersion: 3

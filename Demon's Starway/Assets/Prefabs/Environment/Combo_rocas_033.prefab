@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33090044991402384}
   - component: {fileID: 23445942869614466}
   - component: {fileID: 95712740026424852}
+  - component: {fileID: 64958023019731278}
   m_Layer: 0
   m_Name: Roca_Grande_03
   m_TagString: Untagged
@@ -40,9 +41,10 @@ GameObject:
   - component: {fileID: 33788951595691662}
   - component: {fileID: 23846171145958734}
   - component: {fileID: 95036900941083658}
+  - component: {fileID: 64706712132244212}
   m_Layer: 0
   m_Name: Combo_rocas_033
-  m_TagString: Untagged
+  m_TagString: suelo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -58,6 +60,7 @@ GameObject:
   - component: {fileID: 33828942973752850}
   - component: {fileID: 23973308114692544}
   - component: {fileID: 95559321568091006}
+  - component: {fileID: 64048553963358564}
   m_Layer: 0
   m_Name: Roca_07
   m_TagString: Untagged
@@ -75,6 +78,7 @@ GameObject:
   - component: {fileID: 4544121423935300}
   - component: {fileID: 33005815684653158}
   - component: {fileID: 23130865016750080}
+  - component: {fileID: 64982206650495468}
   m_Layer: 0
   m_Name: Piedra002
   m_TagString: Untagged
@@ -129,7 +133,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1421194276072076}
   m_LocalRotation: {x: -0.7006286, y: 0.09549703, z: 0.09549702, w: 0.7006286}
-  m_LocalPosition: {x: 4.1732836, y: 0.93496954, z: -3.0912569}
+  m_LocalPosition: {x: -1.5443431, y: 2.5, z: 0.05711615}
   m_LocalScale: {x: 0.69201756, y: 0.69201756, z: 1.1111393}
   m_Children:
   - {fileID: 4540146685443580}
@@ -293,6 +297,62 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1585818308641796}
   m_Mesh: {fileID: 4300000, guid: 24cee0cd4dccb6441a2a05777503cf4e, type: 3}
+--- !u!64 &64048553963358564
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1585818308641796}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: 24cee0cd4dccb6441a2a05777503cf4e, type: 3}
+--- !u!64 &64706712132244212
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1421194276072076}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: f783c58bd2e1d234daee733286f44d2c, type: 3}
+--- !u!64 &64958023019731278
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1016027855517320}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: fcfa3de9121361642a723cf8d4f7736b, type: 3}
+--- !u!64 &64982206650495468
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1868249990703606}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300002, guid: 24cee0cd4dccb6441a2a05777503cf4e, type: 3}
 --- !u!95 &95036900941083658
 Animator:
   serializedVersion: 3

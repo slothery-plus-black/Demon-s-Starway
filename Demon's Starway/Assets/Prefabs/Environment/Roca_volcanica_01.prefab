@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33215564315389258}
   - component: {fileID: 23635167549393622}
   - component: {fileID: 95567952236484250}
+  - component: {fileID: 64812675242749638}
   m_Layer: 0
   m_Name: Roca_volcanica_01
   m_TagString: Untagged
@@ -80,6 +81,20 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1269927121890936}
+  m_Mesh: {fileID: 4300000, guid: b6c816fb5b63ef745906f106b80ea6b6, type: 3}
+--- !u!64 &64812675242749638
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1269927121890936}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: b6c816fb5b63ef745906f106b80ea6b6, type: 3}
 --- !u!95 &95567952236484250
 Animator:

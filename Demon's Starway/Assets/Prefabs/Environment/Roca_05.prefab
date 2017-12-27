@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33249232124609482}
   - component: {fileID: 23926754852398468}
   - component: {fileID: 95634451443296706}
+  - component: {fileID: 64917931772008718}
   m_Layer: 0
   m_Name: Roca_05
   m_TagString: Untagged
@@ -80,6 +81,20 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1523219779678614}
+  m_Mesh: {fileID: 4300000, guid: a17e659e4febd8f4097dd6a3f3a21161, type: 3}
+--- !u!64 &64917931772008718
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1523219779678614}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: a17e659e4febd8f4097dd6a3f3a21161, type: 3}
 --- !u!95 &95634451443296706
 Animator:

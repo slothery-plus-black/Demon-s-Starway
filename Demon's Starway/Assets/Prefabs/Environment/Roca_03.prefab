@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33996176304681464}
   - component: {fileID: 23554926482437636}
   - component: {fileID: 95055819191959304}
+  - component: {fileID: 64470695768920952}
   m_Layer: 0
   m_Name: Roca_03
   m_TagString: Untagged
@@ -39,6 +40,7 @@ GameObject:
   - component: {fileID: 4412458749741722}
   - component: {fileID: 33385076005260368}
   - component: {fileID: 23808832983686634}
+  - component: {fileID: 64442319684298036}
   m_Layer: 0
   m_Name: Piedra002
   m_TagString: Untagged
@@ -150,6 +152,34 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1128513035564142}
+  m_Mesh: {fileID: 4300000, guid: a59292a662b863245b421f5658e4ef3c, type: 3}
+--- !u!64 &64442319684298036
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1517314377407058}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300002, guid: a59292a662b863245b421f5658e4ef3c, type: 3}
+--- !u!64 &64470695768920952
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1128513035564142}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: a59292a662b863245b421f5658e4ef3c, type: 3}
 --- !u!95 &95055819191959304
 Animator:

@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33165553522094436}
   - component: {fileID: 23036392451829882}
   - component: {fileID: 95663194660539466}
+  - component: {fileID: 64693754323686046}
   m_Layer: 0
   m_Name: Templo
   m_TagString: Untagged
@@ -37,7 +38,7 @@ Transform:
   m_GameObject: {fileID: 1719784824870148}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: -0.022464216, y: 0.93137133, z: -8.925537}
-  m_LocalScale: {x: 1, y: 1, z: 1.47299}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -80,6 +81,20 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1719784824870148}
+  m_Mesh: {fileID: 4300000, guid: 0c09e4aa422a4714495c42fb37906f69, type: 3}
+--- !u!64 &64693754323686046
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1719784824870148}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 0c09e4aa422a4714495c42fb37906f69, type: 3}
 --- !u!95 &95663194660539466
 Animator:

@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Control : MonoBehaviour {
 
+	public ReproductorSonidos sonidos;
+	public AudioClip sonidoSalto;
+	
+
 	List<GameObject> chocando = new List<GameObject>();
 
 	//List<GameObject> chocandoGravedad = new List<GameObject>();
@@ -205,6 +209,7 @@ public class Control : MonoBehaviour {
 		r.AddForce (mov * f, ForceMode.Acceleration);
 	}
 	void AplicarFuerzaSalto (Vector3 mov, float f){
+		sonidos.ReproducirSonido(sonidoSalto);
 		r.AddForce (mov * f, ForceMode.VelocityChange);
 	}	
 }

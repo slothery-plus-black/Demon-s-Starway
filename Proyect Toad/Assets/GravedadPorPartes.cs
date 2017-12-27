@@ -22,10 +22,9 @@ public class GravedadPorPartes : MonoBehaviour {
 		if (objects.Count != 0)
 		foreach (GameObject o in objects){
 			Rigidbody r = o.GetComponent<Rigidbody> ();
-			r.AddForce(direccion.normalized * fuerzaGravitatoria * r.mass);
+			r.AddForce(direccion * fuerzaGravitatoria, ForceMode.Acceleration);
 		}
 	}
-
 
 	void OnTriggerEnter (Collider col){
 		objects.Add (col.gameObject);

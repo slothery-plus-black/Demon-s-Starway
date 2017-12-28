@@ -7,11 +7,11 @@ public class CM_Script : MonoBehaviour {
 	private float NewAngle = 0f;
 	private bool Mov = false;
 	private int direction = 0;
-	Rigidbody Rigidbody;
+	//Rigidbody Rigidbody;
 
 	// Use this for initialization
 	void Start () {
-		Rigidbody = gameObject.GetComponent<Rigidbody>();
+		//Rigidbody = gameObject.GetComponent<Rigidbody>();
 	}
 	
 	// Update is called once per frame

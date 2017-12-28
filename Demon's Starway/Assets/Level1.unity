@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 5cb6796e7e6375b4e88dda177c09be5d, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.15822503, g: 0.23081386, b: 0.33378676, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -238,7 +238,7 @@ Transform:
   - {fileID: 1775645102}
   - {fileID: 285132456}
   m_Father: {fileID: 302287360}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 180, y: 90, z: 0}
 --- !u!1001 &55430318
 Prefab:
@@ -1488,7 +1488,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: dce5848962c0d814cb9513735d2a3117, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.043
+  m_Volume: 0.05
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -2548,8 +2548,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30907ae38ef5f014b9df7e02a167d4ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jugador: {fileID: 0}
-  planeta: {fileID: 0}
   speedH: 4
   speedV: 4
 --- !u!4 &1329522263
@@ -2558,14 +2556,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1329522261}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0.28425607, y: -0.106947884, z: 0.0319257, w: 0.95222974}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 596701818}
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 33.242, y: -12.816001, z: 0}
 --- !u!1 &1408867158 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100004, guid: 9efd26c19394f8d4b84336491d22bc54, type: 3}

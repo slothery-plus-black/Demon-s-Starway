@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.15822503, g: 0.23081386, b: 0.33378676, a: 1}
+  m_IndirectSpecularColor: {r: 0.1627638, g: 0.23256963, b: 0.33557397, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -463,7 +463,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a48e14e6a769df5428f35a54dddc4a07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  escena: Level1
+  ruleta: {fileID: 299254847}
 --- !u!1 &112380004
 GameObject:
   m_ObjectHideFlags: 0

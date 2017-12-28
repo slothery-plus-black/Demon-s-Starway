@@ -842,7 +842,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direccion: {x: -1, y: 0, z: 0}
-  fuerzaGravitatoria: 10
+  fuerzaGravitatoria: 20
 --- !u!64 &323476343
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -951,7 +951,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direccion: {x: 0, y: 0, z: -1}
-  fuerzaGravitatoria: 10
+  fuerzaGravitatoria: 20
 --- !u!64 &343460817
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1060,7 +1060,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direccion: {x: 0, y: 0, z: 1}
-  fuerzaGravitatoria: 10
+  fuerzaGravitatoria: 20
 --- !u!64 &408899968
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1345,7 +1345,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direccion: {x: 0, y: -1, z: 0}
-  fuerzaGravitatoria: 10
+  fuerzaGravitatoria: 20
 --- !u!64 &587544454
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1740,7 +1740,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direccion: {x: 1, y: 0, z: 0}
-  fuerzaGravitatoria: 10
+  fuerzaGravitatoria: 20
 --- !u!64 &815800842
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2225,7 +2225,7 @@ MonoBehaviour:
   planeta: {fileID: 302287360}
   fuerzaMovimiento: 10
   fuerzaMovimientoEnAire: 2.5
-  fuerzaSalto: 5.5
+  fuerzaSalto: 7
 --- !u!54 &1133081158
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2990,7 +2990,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direccion: {x: 0, y: 1, z: 0}
-  fuerzaGravitatoria: 10
+  fuerzaGravitatoria: 20
 --- !u!64 &1903277275
 MeshCollider:
   m_ObjectHideFlags: 0

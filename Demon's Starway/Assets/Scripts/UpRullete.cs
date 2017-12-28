@@ -24,10 +24,10 @@ public class UpRullete : MonoBehaviour {
 
 	void OnMouseUp(){
 		if(!cMl_Script.GetLevel()){
-			print ("ButtoDownP");
+			//print ("ButtoDownP");
 			roulleteP.SetBoolUp ();
 		}else{
-			print ("ButtoDownPL");
+			//print ("ButtoDownPL");
 			roulletePL.SetBoolUp ();
 		}
 		

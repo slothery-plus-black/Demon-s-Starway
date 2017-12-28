@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Camara : MonoBehaviour {
-    public GameObject jugador;
-    public GameObject planeta;
+    //public GameObject jugador;
+    //public GameObject planeta;
 	public float speedH = 2.0f;
     public float speedV = 2.0f;
 

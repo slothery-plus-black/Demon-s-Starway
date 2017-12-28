@@ -26,7 +26,7 @@ public class LevelScriptButton : MonoBehaviour {
 
 	void OnMouseDown(){
 		if(!cMl_Script.GetLevel()){
-			print("pulsado");
+			//print("pulsado");
 			if((int)RoulletePos.GetAnlge()==0){;
 				cMl_Script.SetBoolMov();
 			}

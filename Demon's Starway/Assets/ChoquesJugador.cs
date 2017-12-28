@@ -34,5 +34,17 @@ public class ChoquesJugador : MonoBehaviour {
 				salida.SetActive(true);
 			}
 		}
+
+		if (other.gameObject.tag.ToLower().Equals("enemigo")){
+			//Se le quita una vida o muere
+			CargadorEscenas.CargaEscenaAsync("mundo1");
+		}
+	}
+
+	void OnCollisionEnter(Collision other){
+		if (other.gameObject.tag.ToLower().Equals("enemigo")){
+			//Se le quita una vida o muere
+			CargadorEscenas.CargaEscenaAsync("mundo1");
+		}
 	}
 }

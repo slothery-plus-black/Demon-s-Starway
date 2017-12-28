@@ -6,7 +6,6 @@ public class Control : MonoBehaviour {
 
 	public ReproductorSonidos sonidos;
 	public AudioClip sonidoSalto;
-	
 
 	List<GameObject> chocando = new List<GameObject>();
 
@@ -32,6 +31,8 @@ public class Control : MonoBehaviour {
 
 	//int triggers = 0;
 
+	Vector3 fuerzaTotal = Vector3.zero;
+
 	void Awake () {
 		r = GetComponent<Rigidbody> ();
 		cam = Camera.main;
@@ -42,44 +43,41 @@ public class Control : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-
+		bool tecla = false;
 		//Debug.Log(enSuelo);
 
 		if (Input.GetKey (KeyCode.A)) {
 			//r.AddForce (-cam.transform.right * fuerza, ForceMode.Impulse);
 			//r.AddForce(-movHorizontal * fuerza, ForceMode.Impulse);
-			float f = fuerzaMovimiento;
-			if (!enSuelo)
-				f = fuerzaMovimientoEnAire;
+			
 
-			AplicarFuerza(-movH, f);
+			AplicarFuerza(-movH);
+
+			tecla = true;
 		}
 
 		if (Input.GetKey (KeyCode.D)) {
 			//r.AddForce (cam.transform.right * fuerza, ForceMode.Impulse);
 			//r.AddForce(movHorizontal * fuerza, ForceMode.Impulse);
-			float f = fuerzaMovimiento;
-			if (!enSuelo)
-				f = fuerzaMovimientoEnAire;
 			
-			AplicarFuerza(movH, f);
+			AplicarFuerza(movH);
+
+			tecla = true;
 		}
 
 		if (Input.GetKey (KeyCode.W)) {
 			//r.AddForce (cam.transform.up * fuerza, ForceMode.Impulse);
-			float f = fuerzaMovimiento;
-			if (!enSuelo)
-				f = fuerzaMovimientoEnAire;
-			AplicarFuerza(movV, f);
+			AplicarFuerza(movV);
+
+			tecla = true;
 		}
 
 		if (Input.GetKey (KeyCode.S)) {
 			//r.AddForce (-cam.transform.up * fuerza, ForceMode.Impulse);
-			float f = fuerzaMovimiento;
-			if (!enSuelo)
-				f = fuerzaMovimientoEnAire;
 
-			AplicarFuerza(-movV, f);
+			AplicarFuerza(-movV);
+
+			tecla = true;
 		}
 
 		if (enSuelo && Input.GetKeyDown (KeyCode.Space)) {
@@ -88,20 +86,16 @@ public class Control : MonoBehaviour {
 			enSuelo = false;
 		}
 
-		/*if (!enSuelo && chocandoGravedad.Count == 0){
-			AplicarFuerza((planeta.transform.position - transform.position).normalized, fuerzaGravitatoriaCircular);
-		}else{
-			if (chocandoGravedad.Count > 0){
-				Vector3 dir = chocandoGravedad[0].GetComponent<Gravedad>().direccion;
-				AplicarFuerza(dir.normalized, fuerzaGravitatoriaCircular);
-				AplicarFuerza((planeta.transform.position - transform.position).normalized, fuerzaGravitatoriaCircular/50);
-			}else{
-				AplicarFuerza((planeta.transform.position - transform.position).normalized, fuerzaGravitatoriaCircular/2);
-				Debug.Log("otr");
-			}
-			
-		}*/
-		//Debug.Log(chocandoGravedad.Count);
+		if (fuerzaTotal != Vector3.zero){
+			float f = fuerzaMovimiento;
+			if (!enSuelo)
+				f = fuerzaMovimientoEnAire;
+			AplicarFuerzaFinal(f);
+		}
+
+		if (enSuelo && !tecla){
+			r.velocity /= 2;
+		}
 	}
 
 	void ComprobarSuelo(GameObject other){
@@ -124,28 +118,6 @@ public class Control : MonoBehaviour {
 				enSuelo = false;
 		}
 	}
-/*
-	void ComprobarGravedad(GameObject other){
-		if (other.tag.Equals("gravedad")){
-			if (!chocandoGravedad.Contains(other)){
-				chocandoGravedad.Add(other);
-				if (ultimaGravedad == null)
-					ultimaGravedad = other;
-			}
-		}
-	}
-	void ComprobarGravedadSalida(GameObject other){
-		if (other.tag.Equals("gravedad")){
-			if (chocandoGravedad.Contains(other)){
-				chocandoGravedad.Remove(other);
-				if (chocandoGravedad.Count == 0){
-					ultimaGravedad = null;
-				}else{
-					ultimaGravedad = other;
-				}
-			}
-		}
-	}*/
 
 	void OnTriggerEnter(Collider other){
 		//triggers++;
@@ -205,9 +177,15 @@ public class Control : MonoBehaviour {
 		}
 	}
 
-	void AplicarFuerza (Vector3 mov, float f){
-		r.AddForce (mov * f, ForceMode.Acceleration);
+	void AplicarFuerza (Vector3 mov){
+		fuerzaTotal += mov;
 	}
+
+	void AplicarFuerzaFinal (float f){
+		r.AddForce (fuerzaTotal * f, ForceMode.Acceleration);
+		fuerzaTotal = Vector3.zero;
+	}
+
 	void AplicarFuerzaSalto (Vector3 mov, float f){
 		sonidos.ReproducirSonido(sonidoSalto);
 		r.AddForce (mov * f, ForceMode.VelocityChange);

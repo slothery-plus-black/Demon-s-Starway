@@ -20,15 +20,18 @@ public class GravedadPorPartes : NetworkBehaviour {
 	}
 
 	void FixedUpdate() {
-		if (objects.Count != 0)
-		foreach (GameObject o in objects){
-			Rigidbody r = o.GetComponent<Rigidbody> ();
-			r.AddForce(direccion * fuerzaGravitatoria, ForceMode.Acceleration);
+		if (isServer){
+			if (objects.Count != 0)
+			foreach (GameObject o in objects){
+				Rigidbody r = o.GetComponent<Rigidbody> ();
+				r.AddForce(direccion * fuerzaGravitatoria, ForceMode.Acceleration);
+			}
 		}
+		
 	}
 
 	void OnTriggerEnter (Collider col){
-		if (col.gameObject.tag.Equals("gravedad")){
+		if (isServer && col.gameObject.tag.Equals("gravedad")){
 			//if (isLocalPlayer){
 				objects.Add (col.gameObject);
 			//}
@@ -37,7 +40,7 @@ public class GravedadPorPartes : NetworkBehaviour {
 	}
 
 	void OnTriggerExit (Collider col){
-		if (col.gameObject.tag.Equals("gravedad")){
+		if (isServer && col.gameObject.tag.Equals("gravedad")){
 			objects.Remove (col.gameObject);
 		}
 	}

@@ -23,7 +23,7 @@ public class DownRullete : MonoBehaviour {
 	}
 
 	void OnMouseUp(){
-		transform.parent.transform.Translate(0,-2,0);
+		transform.GetChild(0).gameObject.SetActive(false);
 		if(!cMl_Script.GetLevel()){
 			print ("ButtoDownP");
 			roulleteP.SetBoolDown ();
@@ -35,7 +35,7 @@ public class DownRullete : MonoBehaviour {
 	}
 
 		void OnMouseDown(){
-		transform.parent.transform.Translate(0,2,0);
+			transform.GetChild(0).gameObject.SetActive(true);
 	}
 
 }

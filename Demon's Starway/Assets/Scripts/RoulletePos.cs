@@ -39,12 +39,12 @@ public class RoulletePos : MonoBehaviour {
 
 		if (Up) {
 			gameObject.transform.Rotate (0, 0, 2);
-			Bicho.transform.Rotate(-1f,0,0);
+			Bicho.transform.Rotate(2f,0,0);
 		}
 
 		if (Down) {
 			gameObject.transform.Rotate (0, 0, -2);
-			Bicho.transform.Rotate(1f,0,0);
+			Bicho.transform.Rotate(-2f,0,0);
 		}
 		if (isAproximatly(gameObject.transform.rotation.eulerAngles.z, NewAngleUp, 0.5f)) {
 			Up = false;

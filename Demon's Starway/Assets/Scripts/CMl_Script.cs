@@ -5,9 +5,11 @@ using UnityEngine;
 public class CMl_Script : MonoBehaviour {
 	private float OldAngle = -45f;
 	private bool Mov = false;
+	GameObject Bicho;
 
 	// Use this for initialization
 	void Start () {
+		Bicho = GameObject.Find("Bicho");
 	}
 	
 	// Update is called once per frame
@@ -20,9 +22,11 @@ public class CMl_Script : MonoBehaviour {
 		if (Mov) {
 			if(OldAngle==-45){
 			gameObject.transform.Rotate (0, 0, 1.5f);
+			Bicho.transform.Translate(0,0,0.5f);
 			}
 			if(OldAngle==0){
 			gameObject.transform.Rotate (0, 0, -1.5f);
+			Bicho.transform.Translate(0,0,-0.5f);
 			}
 		}
 		if(OldAngle==-45){

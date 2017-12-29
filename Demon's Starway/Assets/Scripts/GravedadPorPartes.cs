@@ -1,9 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Networking;
 
-public class GravedadPorPartes : NetworkBehaviour {
+public class GravedadPorPartes : MonoBehaviour {
 	
 	List<GameObject> objects;
 	public Vector3 direccion;
@@ -20,29 +19,19 @@ public class GravedadPorPartes : NetworkBehaviour {
 	}
 
 	void FixedUpdate() {
-		if (isServer){
-			if (objects.Count != 0)
-			foreach (GameObject o in objects){
-				Rigidbody r = o.GetComponent<Rigidbody> ();
-				r.AddForce(direccion * fuerzaGravitatoria, ForceMode.Acceleration);
-			}
+		if (objects.Count != 0)
+		foreach (GameObject o in objects){
+			Rigidbody r = o.GetComponent<Rigidbody> ();
+			r.AddForce(direccion * fuerzaGravitatoria, ForceMode.Acceleration);
 		}
-		
 	}
 
 	void OnTriggerEnter (Collider col){
-		if (isServer && col.gameObject.tag.Equals("gravedad")){
-			//if (isLocalPlayer){
-				objects.Add (col.gameObject);
-			//}
-			
-		}
+		objects.Add (col.gameObject);
 	}
 
 	void OnTriggerExit (Collider col){
-		if (isServer && col.gameObject.tag.Equals("gravedad")){
-			objects.Remove (col.gameObject);
-		}
+		objects.Remove (col.gameObject);
 	}
 
 }

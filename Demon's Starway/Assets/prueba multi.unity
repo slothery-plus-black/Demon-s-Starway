@@ -910,7 +910,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 323476341}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3dce7afeda348884680463034cd97722, type: 3}
+  m_Script: {fileID: 11500000, guid: 8a6b21b52e5c14d448398f2cf5a77207, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   direccion: {x: -1, y: 0, z: 0}
@@ -929,7 +929,7 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 6de296ce6f2b0d94e89a65e84baf9f87, type: 3}
---- !u!114 &323476344
+--- !u!114 &323476348
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -943,24 +943,24 @@ MonoBehaviour:
   m_SceneId:
     m_Value: 0
   m_AssetId:
-    i0: 0
-    i1: 0
-    i2: 0
-    i3: 0
-    i4: 0
-    i5: 0
-    i6: 0
-    i7: 0
-    i8: 0
-    i9: 0
-    i10: 0
-    i11: 0
-    i12: 0
-    i13: 0
-    i14: 0
-    i15: 0
+    i0: 109
+    i1: 226
+    i2: 150
+    i3: 206
+    i4: 111
+    i5: 43
+    i6: 13
+    i7: 148
+    i8: 232
+    i9: 154
+    i10: 101
+    i11: 232
+    i12: 75
+    i13: 175
+    i14: 159
+    i15: 135
   m_ServerOnly: 0
-  m_LocalPlayerAuthority: 0
+  m_LocalPlayerAuthority: 1
 --- !u!1001 &343460814
 Prefab:
   m_ObjectHideFlags: 0
@@ -1051,7 +1051,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 343460815}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3dce7afeda348884680463034cd97722, type: 3}
+  m_Script: {fileID: 11500000, guid: 8a6b21b52e5c14d448398f2cf5a77207, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   direccion: {x: 0, y: 0, z: -1}
@@ -1070,7 +1070,7 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 6de296ce6f2b0d94e89a65e84baf9f87, type: 3}
---- !u!114 &343460818
+--- !u!114 &343460822
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -1084,24 +1084,24 @@ MonoBehaviour:
   m_SceneId:
     m_Value: 0
   m_AssetId:
-    i0: 0
-    i1: 0
-    i2: 0
-    i3: 0
-    i4: 0
-    i5: 0
-    i6: 0
-    i7: 0
-    i8: 0
-    i9: 0
-    i10: 0
-    i11: 0
-    i12: 0
-    i13: 0
-    i14: 0
-    i15: 0
+    i0: 109
+    i1: 226
+    i2: 150
+    i3: 206
+    i4: 111
+    i5: 43
+    i6: 13
+    i7: 148
+    i8: 232
+    i9: 154
+    i10: 101
+    i11: 232
+    i12: 75
+    i13: 175
+    i14: 159
+    i15: 135
   m_ServerOnly: 0
-  m_LocalPlayerAuthority: 0
+  m_LocalPlayerAuthority: 1
 --- !u!1001 &408899965
 Prefab:
   m_ObjectHideFlags: 0
@@ -1192,7 +1192,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 408899966}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3dce7afeda348884680463034cd97722, type: 3}
+  m_Script: {fileID: 11500000, guid: 8a6b21b52e5c14d448398f2cf5a77207, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   direccion: {x: 0, y: 0, z: 1}
@@ -1211,7 +1211,7 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 6de296ce6f2b0d94e89a65e84baf9f87, type: 3}
---- !u!114 &408899969
+--- !u!114 &408899973
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -1225,24 +1225,24 @@ MonoBehaviour:
   m_SceneId:
     m_Value: 0
   m_AssetId:
-    i0: 0
-    i1: 0
-    i2: 0
-    i3: 0
-    i4: 0
-    i5: 0
-    i6: 0
-    i7: 0
-    i8: 0
-    i9: 0
-    i10: 0
-    i11: 0
-    i12: 0
-    i13: 0
-    i14: 0
-    i15: 0
+    i0: 109
+    i1: 226
+    i2: 150
+    i3: 206
+    i4: 111
+    i5: 43
+    i6: 13
+    i7: 148
+    i8: 232
+    i9: 154
+    i10: 101
+    i11: 232
+    i12: 75
+    i13: 175
+    i14: 159
+    i15: 135
   m_ServerOnly: 0
-  m_LocalPlayerAuthority: 0
+  m_LocalPlayerAuthority: 1
 --- !u!1001 &502819287
 Prefab:
   m_ObjectHideFlags: 0
@@ -1546,7 +1546,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 587544452}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3dce7afeda348884680463034cd97722, type: 3}
+  m_Script: {fileID: 11500000, guid: 8a6b21b52e5c14d448398f2cf5a77207, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   direccion: {x: 0, y: -1, z: 0}
@@ -1565,7 +1565,7 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 6de296ce6f2b0d94e89a65e84baf9f87, type: 3}
---- !u!114 &587544455
+--- !u!114 &587544459
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -1579,24 +1579,24 @@ MonoBehaviour:
   m_SceneId:
     m_Value: 0
   m_AssetId:
-    i0: 0
-    i1: 0
-    i2: 0
-    i3: 0
-    i4: 0
-    i5: 0
-    i6: 0
-    i7: 0
-    i8: 0
-    i9: 0
-    i10: 0
-    i11: 0
-    i12: 0
-    i13: 0
-    i14: 0
-    i15: 0
+    i0: 109
+    i1: 226
+    i2: 150
+    i3: 206
+    i4: 111
+    i5: 43
+    i6: 13
+    i7: 148
+    i8: 232
+    i9: 154
+    i10: 101
+    i11: 232
+    i12: 75
+    i13: 175
+    i14: 159
+    i15: 135
   m_ServerOnly: 0
-  m_LocalPlayerAuthority: 0
+  m_LocalPlayerAuthority: 1
 --- !u!1 &596701817
 GameObject:
   m_ObjectHideFlags: 0
@@ -1852,7 +1852,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 815800840}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3dce7afeda348884680463034cd97722, type: 3}
+  m_Script: {fileID: 11500000, guid: 8a6b21b52e5c14d448398f2cf5a77207, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   direccion: {x: 1, y: 0, z: 0}
@@ -1871,7 +1871,7 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 6de296ce6f2b0d94e89a65e84baf9f87, type: 3}
---- !u!114 &815800843
+--- !u!114 &815800847
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -1885,24 +1885,24 @@ MonoBehaviour:
   m_SceneId:
     m_Value: 0
   m_AssetId:
-    i0: 0
-    i1: 0
-    i2: 0
-    i3: 0
-    i4: 0
-    i5: 0
-    i6: 0
-    i7: 0
-    i8: 0
-    i9: 0
-    i10: 0
-    i11: 0
-    i12: 0
-    i13: 0
-    i14: 0
-    i15: 0
+    i0: 109
+    i1: 226
+    i2: 150
+    i3: 206
+    i4: 111
+    i5: 43
+    i6: 13
+    i7: 148
+    i8: 232
+    i9: 154
+    i10: 101
+    i11: 232
+    i12: 75
+    i13: 175
+    i14: 159
+    i15: 135
   m_ServerOnly: 0
-  m_LocalPlayerAuthority: 0
+  m_LocalPlayerAuthority: 1
 --- !u!1001 &847251609
 Prefab:
   m_ObjectHideFlags: 0
@@ -3205,7 +3205,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1903277273}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3dce7afeda348884680463034cd97722, type: 3}
+  m_Script: {fileID: 11500000, guid: 8a6b21b52e5c14d448398f2cf5a77207, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   direccion: {x: 0, y: 1, z: 0}
@@ -3224,7 +3224,7 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 6de296ce6f2b0d94e89a65e84baf9f87, type: 3}
---- !u!114 &1903277276
+--- !u!114 &1903277280
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -3238,24 +3238,24 @@ MonoBehaviour:
   m_SceneId:
     m_Value: 0
   m_AssetId:
-    i0: 0
-    i1: 0
-    i2: 0
-    i3: 0
-    i4: 0
-    i5: 0
-    i6: 0
-    i7: 0
-    i8: 0
-    i9: 0
-    i10: 0
-    i11: 0
-    i12: 0
-    i13: 0
-    i14: 0
-    i15: 0
+    i0: 109
+    i1: 226
+    i2: 150
+    i3: 206
+    i4: 111
+    i5: 43
+    i6: 13
+    i7: 148
+    i8: 232
+    i9: 154
+    i10: 101
+    i11: 232
+    i12: 75
+    i13: 175
+    i14: 159
+    i15: 135
   m_ServerOnly: 0
-  m_LocalPlayerAuthority: 0
+  m_LocalPlayerAuthority: 1
 --- !u!1001 &1950542512
 Prefab:
   m_ObjectHideFlags: 0
@@ -3263,6 +3263,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114872717205081364, guid: 36567eb7b8fc08844bf2ac0196d52fab,
+        type: 2}
+      propertyPath: m_Channels.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 114872717205081364, guid: 36567eb7b8fc08844bf2ac0196d52fab,
         type: 2}
       propertyPath: m_SpawnPrefabs.Array.size
@@ -3304,6 +3309,16 @@ Prefab:
         type: 2}
       propertyPath: m_PlayerSpawnMethod
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114872717205081364, guid: 36567eb7b8fc08844bf2ac0196d52fab,
+        type: 2}
+      propertyPath: m_CustomConfig
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114872717205081364, guid: 36567eb7b8fc08844bf2ac0196d52fab,
+        type: 2}
+      propertyPath: m_Channels.Array.data[0]
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 36567eb7b8fc08844bf2ac0196d52fab, type: 2}

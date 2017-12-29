@@ -48,6 +48,7 @@ public class GravedadPorPartesMulti : NetworkBehaviour {
 					r.AddForce(direccion * fuerzaGravitatoria, ForceMode.Acceleration);
 				}
 			}
+			print(objects.Count);
 		/*}else{
 			Rigidbody jr = jugadorLocal.GetComponent<Rigidbody> ();
 			jr.AddForce(direccion * fuerzaGravitatoria, ForceMode.Acceleration);

@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class GravedadPorPartes : MonoBehaviour {
+public class GravedadPorPartes : NetworkBehaviour {
 	
 	List<GameObject> objects;
 	public Vector3 direccion;
@@ -28,7 +29,7 @@ public class GravedadPorPartes : MonoBehaviour {
 
 	void OnTriggerEnter (Collider col){
 		//if (!col.gameObject.tag.Equals("gravedadCircular")){
-			if (col.gameObject.tag.Equals("gravedad")){
+			if (isLocalPlayer){
 				objects.Add (col.gameObject);
 			}
 			
@@ -36,7 +37,7 @@ public class GravedadPorPartes : MonoBehaviour {
 	}
 
 	void OnTriggerExit (Collider col){
-		if (!col.gameObject.tag.Equals("gravedad")){
+		if (isLocalPlayer){
 			objects.Remove (col.gameObject);
 		}
 	}

@@ -29,7 +29,7 @@ GameObject:
   - component: {fileID: 114316517129823266}
   m_Layer: 0
   m_Name: jugadorMulti
-  m_TagString: Untagged
+  m_TagString: gravedad
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -144,7 +144,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ba70eb2abd785c45bb9843dddd7e93f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  salida: {fileID: 0}
 --- !u!114 &114730439176030356
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -2652,6 +2652,10 @@ Prefab:
       propertyPath: m_Mass
       value: 0.05
       objectReference: {fileID: 0}
+    - target: {fileID: 1149834448890628, guid: 399032167b3b5a540b48b72e60fffd91, type: 2}
+      propertyPath: m_TagString
+      value: gravedad
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 399032167b3b5a540b48b72e60fffd91, type: 2}
   m_IsPrefabParent: 0

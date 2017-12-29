@@ -9,6 +9,11 @@ public class GravedadCircular : MonoBehaviour {
 
 	public float gravitationalPull;
 
+	void Start() {
+		if (planet == null)
+			planet = GameObject.Find("planeta").gameObject;
+	}
+
 	void FixedUpdate() {
 		foreach (GameObject o in objects) {
 			Rigidbody r = o.GetComponent<Rigidbody>();

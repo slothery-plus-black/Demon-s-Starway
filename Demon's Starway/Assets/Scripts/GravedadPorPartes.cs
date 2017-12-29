@@ -27,11 +27,15 @@ public class GravedadPorPartes : MonoBehaviour {
 	}
 
 	void OnTriggerEnter (Collider col){
-		objects.Add (col.gameObject);
+		//if (!col.gameObject.tag.Equals("gravedadCircular")){
+			objects.Add (col.gameObject);
+		//}
 	}
 
 	void OnTriggerExit (Collider col){
-		objects.Remove (col.gameObject);
+		//if (!col.gameObject.tag.Equals("gravedadCircular")){
+			objects.Remove (col.gameObject);
+		//}
 	}
 
 }

@@ -41,6 +41,10 @@ public class Control : MonoBehaviour {
 		r.maxDepenetrationVelocity = 8;
 
 		sonidos = GameObject.FindGameObjectWithTag("reproductor").GetComponent<ReproductorSonidos>();
+
+		if (planeta == null){
+			planeta = GameObject.Find("planeta").transform;
+		}
 	}
 
 	void Start (){

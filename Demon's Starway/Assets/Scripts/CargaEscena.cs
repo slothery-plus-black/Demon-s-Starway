@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class CargaEscena : MonoBehaviour {
 
-	public string escena;
+	//public string escena;
+	public GameObject ruleta;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -16,7 +18,18 @@ public class CargaEscena : MonoBehaviour {
 	}
 
 	void OnMouseDown(){
-		//print("cargando escena");
-		CargadorEscenas.CargaEscena(escena);
+		float rotZ = ruleta.transform.rotation.z;
+		
+		if (rotZ < 0.2f){
+			CargadorEscenas.CargaEscena("Level1");
+		}
+		
+		if (rotZ < 0.3f && rotZ > 0.2f){
+			CargadorEscenas.CargaEscena("Level2");
+		}
+
+		if (rotZ < 0.6f && rotZ > 0.3f){
+			CargadorEscenas.CargaEscena("Level3");
+		}
 	}
 }

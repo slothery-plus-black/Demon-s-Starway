@@ -6,9 +6,29 @@ using UnityEngine;
 public class ReproductorSonidos : MonoBehaviour {
 	AudioSource au;
 
+	public AudioClip sonidoSpawn;
+	public AudioClip sonidoSalto;
+	public AudioClip[] sonidoPuntaEstrella;
+	public AudioClip sonidoSalida;
+	public AudioClip sonidoDanio;
+	public AudioClip sonidoMuerte;
+
+	public AudioClip sonidoMenu;
+	public AudioClip sonidoNivel;
+
 	// Use this for initialization
-	void Start () {
-		au = GetComponent<AudioSource>();
+	void Awake () {
+		if (GameObject.FindGameObjectsWithTag("reproductor").Length <= 1){
+			au = GetComponent<AudioSource>();
+			DontDestroyOnLoad(gameObject);
+		}
+		else{
+			Destroy(gameObject);
+		}
+	}
+
+	void Start() {
+		CambiarSonidoFondo(CargadorEscenas.CogerNombreEscenaActual());
 	}
 	
 	// Update is called once per frame
@@ -16,13 +36,46 @@ public class ReproductorSonidos : MonoBehaviour {
 		
 	}
 
+	public void CambiarSonidoFondo(string nivel){
+		au.Stop();
+		switch (nivel){
+			case "menu":
+				au.clip = sonidoMenu;
+				break;
+			case "level1":
+			case "level2":
+			case "level3":
+				au.clip = sonidoNivel;
+				break;
+		}
+		au.Play();
+	}
+
 	public void ReproducirSonido(AudioClip clip){
 		au.PlayOneShot(clip);
 	}
 
-	public void CambiarSonidoFondo(AudioClip clip){
-		au.Stop();
-		au.clip = clip;
-		au.Play();
+	public void ReproducirSonidoSpawn(){
+		au.PlayOneShot(sonidoSpawn);
+	}
+
+	public void ReproducirSonidoSalto(){
+		au.PlayOneShot(sonidoSalto);
+	}
+
+	public void ReproducirPuntaEstrella(int pos){
+		au.PlayOneShot(sonidoPuntaEstrella[pos]);
+	}
+
+	public void ReproducirSonidoSalida(){
+		au.PlayOneShot(sonidoSalida);
+	}
+
+	public void ReproducirSonidoDanio(){
+		au.PlayOneShot(sonidoDanio);
+	}
+
+	public void ReproducirSonidoMuerte(){
+		au.PlayOneShot(sonidoMuerte);
 	}
 }

@@ -23,6 +23,7 @@ public class UpRullete : MonoBehaviour {
 	}
 
 	void OnMouseUp(){
+		transform.parent.transform.Translate(0,2,0);
 		if(!cMl_Script.GetLevel()){
 			//print ("ButtoDownP");
 			roulleteP.SetBoolUp ();
@@ -31,6 +32,10 @@ public class UpRullete : MonoBehaviour {
 			roulletePL.SetBoolUp ();
 		}
 		
+	}
+
+	void OnMouseDown(){
+		transform.parent.transform.Translate(0,-2,0);
 	}
 
 }

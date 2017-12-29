@@ -9,10 +9,14 @@ public class RoulletePos : MonoBehaviour {
 	private bool Up = false;
 	private bool Down = false;
 	Rigidbody2D roulleteRb;
+	GameObject Bicho;
+	Quaternion FirstPosBicho;
 
 	// Use this for initialization
 	void Start () {
 		roulleteRb = gameObject.GetComponent<Rigidbody2D> ();
+		Bicho = GameObject.Find("Bicho");
+		FirstPosBicho = Bicho.transform.rotation;
 	}
 	
 	// Update is called once per frame
@@ -35,19 +39,23 @@ public class RoulletePos : MonoBehaviour {
 
 		if (Up) {
 			gameObject.transform.Rotate (0, 0, 2);
+			Bicho.transform.Rotate(-1f,0,0);
 		}
 
 		if (Down) {
 			gameObject.transform.Rotate (0, 0, -2);
+			Bicho.transform.Rotate(1f,0,0);
 		}
 		if (isAproximatly(gameObject.transform.rotation.eulerAngles.z, NewAngleUp, 0.5f)) {
 			Up = false;
 			OldAngle = NewAngleUp;
 			roulleteRb.MoveRotation (OldAngle);
+			Bicho.transform.rotation = FirstPosBicho;
 		} else if (isAproximatly(gameObject.transform.rotation.eulerAngles.z, NewAngleDown, 0.5f)) {
 			Down = false;
 			OldAngle = NewAngleDown;
 			roulleteRb.MoveRotation (OldAngle);
+			Bicho.transform.rotation = FirstPosBicho;
 		}
 			
 	}

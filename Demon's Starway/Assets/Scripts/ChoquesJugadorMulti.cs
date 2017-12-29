@@ -47,6 +47,8 @@ public class ChoquesJugadorMulti : NetworkBehaviour {
 				pivot.transform.rotation = posInicialRotation;
 				transform.position = posInicial;
 				//RpcRespawn();
+			}else{
+				CargadorEscenas.CargaEscenaAsync("Menu");
 			}
 			//vidas --;
 

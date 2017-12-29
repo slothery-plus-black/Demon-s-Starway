@@ -48,7 +48,7 @@ public class GravedadPorPartesMulti : NetworkBehaviour {
 					r.AddForce(direccion * fuerzaGravitatoria, ForceMode.Acceleration);
 				}
 			}
-			print(objects.Count);
+			//print(objects.Count);
 		/*}else{
 			Rigidbody jr = jugadorLocal.GetComponent<Rigidbody> ();
 			jr.AddForce(direccion * fuerzaGravitatoria, ForceMode.Acceleration);
@@ -57,39 +57,32 @@ public class GravedadPorPartesMulti : NetworkBehaviour {
 	}
 
 	void OnTriggerEnter (Collider col){
-		if (isServer){
-		/*if (col.gameObject.tag.Equals("Player")){
-			if (col.gameObject.Equals(jugadorLocal)){
-				print("añadido local");
-				objects.Add (col.gameObject);
-			}
-		}else{*/
-			objects.Add (col.gameObject);
-		//}
-		}else{
+		if (col.gameObject.tag.Equals("Player")){
 			Renderer rend = col.gameObject.GetComponent<Renderer>();
-			//Debug.Log(rend.material.color);
-			if (rend.material.color.Equals(Color.red) && col.gameObject.tag.Equals("Player")){
-				//print(col.gameObject.name);
+			if (rend.material.color.Equals(Color.red)){
 				objects.Add(col.gameObject);
 			}
+		}else{
+			objects.Add (col.gameObject);
 		}
 		
 	}
 
 	void OnTriggerExit (Collider col){
-		if (isServer){
-		//if (col.gameObject.tag.Equals("Player")){
+		/*if (isServer){
 			objects.Remove (col.gameObject);
-		//}
-		}else{
+		}else{*/
+			
+		//Debug.Log(rend.material.color);
+		if (col.gameObject.tag.Equals("Player")){
 			Renderer rend = col.gameObject.GetComponent<Renderer>();
-			//Debug.Log(rend.material.color);
-			if (rend.material.color.Equals(Color.red) && col.gameObject.tag.Equals("Player")){
-				//print(col.gameObject.name);
-				objects.Remove (col.gameObject);
+			if (rend.material.color.Equals(Color.red)){
+				objects.Remove(col.gameObject);
 			}
+		}else{
+			objects.Remove (col.gameObject);
 		}
+		
 	}
 
 }

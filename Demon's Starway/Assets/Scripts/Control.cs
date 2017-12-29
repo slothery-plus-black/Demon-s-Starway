@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Control : MonoBehaviour {
 
-	public ReproductorSonidos sonidos;
-	public AudioClip sonidoSalto;
+	ReproductorSonidos sonidos;
+	//public AudioClip sonidoSalto;
 
 	List<GameObject> chocando = new List<GameObject>();
 
@@ -39,17 +39,21 @@ public class Control : MonoBehaviour {
 
 		r.maxAngularVelocity = 8;
 		r.maxDepenetrationVelocity = 8;
+
+		sonidos = GameObject.FindGameObjectWithTag("reproductor").GetComponent<ReproductorSonidos>();
+	}
+
+	void Start (){
+		sonidos.ReproducirSonidoSpawn();
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate () {
 		bool tecla = false;
-		//Debug.Log(enSuelo);
 
 		if (Input.GetKey (KeyCode.A)) {
 			//r.AddForce (-cam.transform.right * fuerza, ForceMode.Impulse);
 			//r.AddForce(-movHorizontal * fuerza, ForceMode.Impulse);
-			
 
 			AplicarFuerza(-movH);
 
@@ -81,7 +85,7 @@ public class Control : MonoBehaviour {
 		}
 
 		if (enSuelo && Input.GetKeyDown (KeyCode.Space)) {
-			//r.AddForce (movS * fuerzaSalto, ForceMode.Impulse);
+			sonidos.ReproducirSonidoSalto();
 			AplicarFuerzaSalto(movS, fuerzaSalto);
 			enSuelo = false;
 		}
@@ -120,14 +124,10 @@ public class Control : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider other){
-		//triggers++;
 		ComprobarSuelo(other.gameObject);
-		//ComprobarGravedad(other.gameObject);
 	}
 	void OnTriggerExit(Collider other){
-		//triggers--;
 		ComprobarSueloSalida(other.gameObject);
-		//ComprobarGravedadSalida(other.gameObject);
 	}
 
 	void OnCollisionEnter(Collision other){
@@ -187,7 +187,6 @@ public class Control : MonoBehaviour {
 	}
 
 	void AplicarFuerzaSalto (Vector3 mov, float f){
-		sonidos.ReproducirSonido(sonidoSalto);
 		r.AddForce (mov * f, ForceMode.VelocityChange);
 	}	
 }

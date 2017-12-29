@@ -1620,6 +1620,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 640f1b27701f6e44e806caa2734e3295, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sonidoSpawn: {fileID: 0}
+  sonidoSalto: {fileID: 0}
+  sonidoPuntaEstrella: []
+  sonidoSalida: {fileID: 0}
+  sonidoDanio: {fileID: 0}
+  sonidoMuerte: {fileID: 0}
 --- !u!82 &792086764
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2639,8 +2645,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d76631c8c9353f4584b0ff017af31aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sonidos: {fileID: 792086763}
-  sonidoPunta: {fileID: 8300000, guid: 7942eaee12cecaf4fa961016dc10e5ba, type: 3}
   salida: {fileID: 1215014489}
 --- !u!114 &1133081157
 MonoBehaviour:
@@ -2653,8 +2657,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25c363a79b6ce1b4086a4f255c7a4f2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sonidos: {fileID: 792086763}
-  sonidoSalto: {fileID: 8300000, guid: b7327ffb571e9e546bab5297adc4cf0f, type: 3}
   planeta: {fileID: 302287360}
   fuerzaMovimiento: 10
   fuerzaMovimientoEnAire: 2.5
@@ -3035,14 +3037,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1329522261}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0.3152035, y: -0.08346938, z: 0.027842984, w: 0.9449362}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 596701818}
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 36.894, y: -10.096001, z: 0}
 --- !u!1001 &1552220261
 Prefab:
   m_ObjectHideFlags: 0

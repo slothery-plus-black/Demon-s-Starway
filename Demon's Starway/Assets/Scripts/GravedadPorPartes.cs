@@ -28,16 +28,16 @@ public class GravedadPorPartes : NetworkBehaviour {
 	}
 
 	void OnTriggerEnter (Collider col){
-		//if (!col.gameObject.tag.Equals("gravedadCircular")){
-			if (isLocalPlayer){
+		if (col.gameObject.tag.Equals("gravedad")){
+			//if (isLocalPlayer){
 				objects.Add (col.gameObject);
-			}
+			//}
 			
-		//}
+		}
 	}
 
 	void OnTriggerExit (Collider col){
-		if (isLocalPlayer){
+		if (col.gameObject.tag.Equals("gravedad")){
 			objects.Remove (col.gameObject);
 		}
 	}

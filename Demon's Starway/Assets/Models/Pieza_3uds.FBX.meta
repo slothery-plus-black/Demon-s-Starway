@@ -1,20 +1,15 @@
 fileFormatVersion: 2
-guid: 652161be995acd348932cd1c6fb08760
-timeCreated: 1514442219
+guid: b91abfa55d574dd4398a58fe2265b444
+timeCreated: 1514575313
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
     100000: //RootNode
-    100002: Cesped
     400000: //RootNode
-    400002: Cesped
     2300000: //RootNode
-    2300002: Cesped
     3300000: //RootNode
-    3300002: Cesped
-    4300000: Pieza
-    4300002: Cesped
+    4300000: Box001
     9500000: //RootNode
   materials:
     importMaterials: 1

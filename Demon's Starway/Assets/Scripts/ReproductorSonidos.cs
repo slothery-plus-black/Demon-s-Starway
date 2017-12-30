@@ -14,6 +14,8 @@ public class ReproductorSonidos : MonoBehaviour {
 	public AudioClip sonidoMuerte;
 
 	public AudioClip sonidoMenu;
+	public AudioClip[] sonidoClick;
+	public AudioClip sonidoRuleta;
 	public AudioClip sonidoNivel;
 
 	// Use this for initialization
@@ -77,5 +79,13 @@ public class ReproductorSonidos : MonoBehaviour {
 
 	public void ReproducirSonidoMuerte(){
 		au.PlayOneShot(sonidoMuerte);
+	}
+
+	public void ReproducirSonidoClick(int pos){
+		au.PlayOneShot(sonidoClick[pos]);
+	}
+
+	public void ReproducirSonidoRuleta(){
+		au.PlayOneShot(sonidoRuleta);
 	}
 }

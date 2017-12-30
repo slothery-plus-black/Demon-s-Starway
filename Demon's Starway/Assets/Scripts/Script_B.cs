@@ -5,6 +5,7 @@ using UnityEngine;
 public class Script_B : MonoBehaviour {
 	GameObject CM;
 	CM_Script cM_Script;
+	ReproductorSonidos sonidos;
 	public float mov;
 
 	void Awake(){
@@ -14,7 +15,7 @@ public class Script_B : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+		sonidos = GameObject.FindGameObjectWithTag("reproductor").GetComponent<ReproductorSonidos>();
 	}
 	
 	// Update is called once per frame
@@ -24,6 +25,8 @@ public class Script_B : MonoBehaviour {
 
 	void OnMouseDown(){
 		transform.GetChild(1).gameObject.SetActive(true);
+		sonidos.ReproducirSonidoClick(0);
+
 	}
 
 	void OnMouseUp(){

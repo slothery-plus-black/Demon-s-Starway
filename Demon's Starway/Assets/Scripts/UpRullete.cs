@@ -8,6 +8,7 @@ public class UpRullete : MonoBehaviour {
 	GameObject roulleteL;
 	RoulletePos roulletePL;
 	CMl_Script cMl_Script;
+	ReproductorSonidos sonido;
 
 	// Use this for initialization
 	void Start () {
@@ -16,6 +17,7 @@ public class UpRullete : MonoBehaviour {
 		roulleteL = GameObject.Find ("RuletaNiveles");
 		roulletePL = roulleteL.GetComponent<RoulletePos> ();
 		cMl_Script = GameObject.Find("CM_level").GetComponent<CMl_Script>();
+		sonido = GameObject.FindGameObjectWithTag("reproductor").GetComponent<ReproductorSonidos>();
 	}
 
 	// Update is called once per frame
@@ -36,6 +38,7 @@ public class UpRullete : MonoBehaviour {
 
 	void OnMouseDown(){
 		transform.GetChild(0).gameObject.SetActive(true);
+		sonido.ReproducirSonidoRuleta();
 	}
 
 }

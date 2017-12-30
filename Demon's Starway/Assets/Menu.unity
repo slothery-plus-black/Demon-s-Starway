@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.09003057, g: 0.12410871, b: 0.19223544, a: 1}
+  m_IndirectSpecularColor: {r: 0.089681946, g: 0.12436471, b: 0.19323218, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -153,6 +153,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114585942804108496, guid: f169a95209c9b8f43a81c59c17fdb580,
+        type: 2}
+      propertyPath: sonidoClick.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4321447041458220, guid: f169a95209c9b8f43a81c59c17fdb580, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -185,6 +190,36 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 114585942804108496, guid: f169a95209c9b8f43a81c59c17fdb580,
+        type: 2}
+      propertyPath: sonidoRuleta
+      value: 
+      objectReference: {fileID: 8300000, guid: 672916e03a18b491196fd7ad634ed67d, type: 3}
+    - target: {fileID: 114585942804108496, guid: f169a95209c9b8f43a81c59c17fdb580,
+        type: 2}
+      propertyPath: sonidoClick
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114585942804108496, guid: f169a95209c9b8f43a81c59c17fdb580,
+        type: 2}
+      propertyPath: sonidoClick.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 27328bfc567b94ffe986dd1fabfaedf9, type: 3}
+    - target: {fileID: 114585942804108496, guid: f169a95209c9b8f43a81c59c17fdb580,
+        type: 2}
+      propertyPath: sonidoClick.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 7c3cdb7e895b148f99b4fbefe9adf32d, type: 3}
+    - target: {fileID: 114585942804108496, guid: f169a95209c9b8f43a81c59c17fdb580,
+        type: 2}
+      propertyPath: sonidoClick.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 372c1383b449740d7bc76989adfc867c, type: 3}
+    - target: {fileID: 114585942804108496, guid: f169a95209c9b8f43a81c59c17fdb580,
+        type: 2}
+      propertyPath: sonidoClick.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: f85a3eebe909940a69fc520491347391, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f169a95209c9b8f43a81c59c17fdb580, type: 2}
   m_IsPrefabParent: 0

@@ -819,7 +819,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direccion: {x: -1, y: 0, z: 0}
-  fuerzaGravitatoria: 10
+  fuerzaGravitatoria: 20
 --- !u!64 &257601247
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1426,7 +1426,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direccion: {x: 0, y: 1, z: 0}
-  fuerzaGravitatoria: 10
+  fuerzaGravitatoria: 20
 --- !u!64 &512439549
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1727,6 +1727,60 @@ MeshCollider:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 821ac9e8894485b489c8c8768d3a1a1a, type: 3}
   m_PrefabInternal: {fileID: 1382461195}
+--- !u!1001 &640048017
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1982785567}
+    m_Modifications:
+    - target: {fileID: 4197502709818986, guid: f9ad2234d582c694ca0937ff7845789b, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.182
+      objectReference: {fileID: 0}
+    - target: {fileID: 4197502709818986, guid: f9ad2234d582c694ca0937ff7845789b, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 4197502709818986, guid: f9ad2234d582c694ca0937ff7845789b, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4197502709818986, guid: f9ad2234d582c694ca0937ff7845789b, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4197502709818986, guid: f9ad2234d582c694ca0937ff7845789b, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4197502709818986, guid: f9ad2234d582c694ca0937ff7845789b, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4197502709818986, guid: f9ad2234d582c694ca0937ff7845789b, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4197502709818986, guid: f9ad2234d582c694ca0937ff7845789b, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4197502709818986, guid: f9ad2234d582c694ca0937ff7845789b, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4197502709818986, guid: f9ad2234d582c694ca0937ff7845789b, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4197502709818986, guid: f9ad2234d582c694ca0937ff7845789b, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: f9ad2234d582c694ca0937ff7845789b, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &641257671
 GameObject:
   m_ObjectHideFlags: 0
@@ -2438,7 +2492,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direccion: {x: 0, y: -1, z: 0}
-  fuerzaGravitatoria: 10
+  fuerzaGravitatoria: 20
 --- !u!64 &894064548
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2673,7 +2727,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direccion: {x: 1, y: 0, z: 0}
-  fuerzaGravitatoria: 10
+  fuerzaGravitatoria: 20
 --- !u!64 &988101129
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4439,7 +4493,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direccion: {x: 0, y: 0, z: -1}
-  fuerzaGravitatoria: 10
+  fuerzaGravitatoria: 20
 --- !u!64 &1606326931
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5681,6 +5735,11 @@ Transform:
   m_Father: {fileID: 1332678590}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1871650664 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4197502709818986, guid: f9ad2234d582c694ca0937ff7845789b,
+    type: 2}
+  m_PrefabInternal: {fileID: 640048017}
 --- !u!1 &1882712846
 GameObject:
   m_ObjectHideFlags: 0
@@ -5752,7 +5811,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direccion: {x: 0, y: 0, z: 1}
-  fuerzaGravitatoria: 10
+  fuerzaGravitatoria: 20
 --- !u!64 &1914469257
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5910,7 +5969,7 @@ MonoBehaviour:
   planeta: {fileID: 784061195}
   fuerzaMovimiento: 10
   fuerzaMovimientoEnAire: 2.5
-  fuerzaSalto: 5.5
+  fuerzaSalto: 7
 --- !u!54 &1982785563
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5932,7 +5991,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1982785561}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_MotionVectors: 1
@@ -5984,9 +6043,10 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1982785561}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.79, y: 0.46, z: -2.95}
+  m_LocalPosition: {x: 0.79, y: 2.993, z: -0.05}
   m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
-  m_Children: []
+  m_Children:
+  - {fileID: 1871650664}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6002,6 +6062,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   salida: {fileID: 1617284553}
+  PS_Salida: {fileID: 0}
 --- !u!1 &1984244511
 GameObject:
   m_ObjectHideFlags: 0

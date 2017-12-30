@@ -27,6 +27,7 @@ public class Control : MonoBehaviour {
 	//Vector3 movVertical = Vector3.zero;
 
 	bool enSuelo = false;
+	int TimeOnJump = 0;
 	//Lista de cuadrados para ver a donde mira
 
 	//int triggers = 0;
@@ -54,6 +55,22 @@ public class Control : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
 		bool tecla = false;
+
+		if(!enSuelo){
+			if(TimeOnJump<=2){
+				transform.GetChild(0).gameObject.transform.localScale = new Vector3 (0.75f,1.5f,0.75f);
+				TimeOnJump++;
+			}else if(TimeOnJump==3){
+				transform.GetChild(0).gameObject.transform.localScale = new Vector3 (0.85f,1.25f,0.85f);
+				TimeOnJump++;
+			}
+			else{
+				transform.GetChild(0).gameObject.transform.localScale = new Vector3 (1,1,1);
+			}
+		}else{
+			transform.GetChild(0).gameObject.transform.localScale = new Vector3 (1,1,1);
+			TimeOnJump=0;
+		}
 
 		if (Input.GetKey (KeyCode.A)) {
 			//r.AddForce (-cam.transform.right * fuerza, ForceMode.Impulse);

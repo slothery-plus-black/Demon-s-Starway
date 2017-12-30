@@ -63,6 +63,7 @@ public class GravedadPorPartesMulti : NetworkBehaviour {
 				objects.Add(col.gameObject);
 			}
 		}else{
+			if (!col.gameObject.tag.Equals("enemigo"))
 			objects.Add (col.gameObject);
 		}
 		

@@ -27,6 +27,7 @@ public class GravedadPorPartes : MonoBehaviour {
 	}
 
 	void OnTriggerEnter (Collider col){
+		if (!col.gameObject.tag.Equals("enemigo"))
 		objects.Add (col.gameObject);
 	}
 

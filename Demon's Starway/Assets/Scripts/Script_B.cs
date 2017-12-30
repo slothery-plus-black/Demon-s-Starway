@@ -25,7 +25,7 @@ public class Script_B : MonoBehaviour {
 
 	void OnMouseDown(){
 		transform.GetChild(1).gameObject.SetActive(true);
-		sonidos.ReproducirSonidoClick(0);
+		sonidos.ReproducirSonidoClick(Random.Range(0,5));
 
 	}
 

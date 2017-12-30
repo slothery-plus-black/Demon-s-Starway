@@ -27,7 +27,6 @@ public class DownRullete : MonoBehaviour {
 
 	void OnMouseUp(){
 		transform.GetChild(0).gameObject.SetActive(false);
-		sonidos.ReproducirSonidoRuleta();
 		if(!cMl_Script.GetLevel()){
 			print ("ButtoDownP");
 			roulleteP.SetBoolDown ();

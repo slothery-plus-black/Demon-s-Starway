@@ -15,7 +15,7 @@ public class AngelCircular : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void LateUpdate () {
 		transform.RotateAround(puntoRotFinal, direccion,speed * Time.deltaTime);
 	}
 }

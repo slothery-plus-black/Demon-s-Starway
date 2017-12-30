@@ -14,8 +14,10 @@ public class ChoquesJugador : MonoBehaviour {
 	ReproductorSonidos sonidos;
 	
 	public GameObject salida;
+	public GameObject PS_Salida;
 
 	GameObject pivot;
+	GameObject RenderVidas;
 
 	// Use this for initialization
 	void Awake () {
@@ -25,6 +27,8 @@ public class ChoquesJugador : MonoBehaviour {
 
 		posInicialCamara = pivot.transform.position;
 		posInicialRotation = pivot.transform.rotation;
+
+		RenderVidas = GameObject.Find("ControlDeVidas");
 
 		sonidos = GameObject.FindGameObjectWithTag("reproductor").GetComponent<ReproductorSonidos>();
 	}
@@ -38,10 +42,13 @@ public class ChoquesJugador : MonoBehaviour {
 		if (other.tag.ToLower().Equals("enemigo")){
 			
 			vidas --;
-
+			RenderVidas.transform.GetChild(vidas).gameObject.SetActive(false);
 			if (vidas <= 0){
 				sonidos.ReproducirSonidoMuerte();
-				CargadorEscenas.CargaEscenaAsync("Menu");
+				RenderVidas.transform.GetChild(3).gameObject.SetActive(true);
+				//DeshabilidarMovimientos
+
+				//CargadorEscenas.CargaEscenaAsync("Menu");
 				
 			}else{
 				sonidos.ReproducirSonidoDanio();
@@ -67,6 +74,7 @@ public class ChoquesJugador : MonoBehaviour {
 			if (puntas.GetPuntas() >= 5){
 				sonidos.ReproducirSonidoSalida();
 				salida.SetActive(true);
+				PS_Salida.SetActive(true);
 			}
 		}
 

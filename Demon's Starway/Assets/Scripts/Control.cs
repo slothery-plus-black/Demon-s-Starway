@@ -88,7 +88,7 @@ public class Control : MonoBehaviour {
 			tecla = true;
 		}
 
-		if (enSuelo && Input.GetKeyDown (KeyCode.Space)) {
+		if (enSuelo && Input.GetKey (KeyCode.Space)) {
 			sonidos.ReproducirSonidoSalto();
 			AplicarFuerzaSalto(movS, fuerzaSalto);
 			enSuelo = false;

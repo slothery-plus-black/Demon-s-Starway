@@ -30,9 +30,31 @@ public class ChoquesJugadorMulti : NetworkBehaviour {
 		posInicialRotation = pivot.transform.rotation;
 
 		//sonidos = GameObject.FindGameObjectWithTag("reproductor").GetComponent<ReproductorSonidos>();
-		vidas = GameObject.Find("Vidas").GetComponent<VidasMulti>();
+		//vidas = GameObject.Find("VidasMulti").GetComponent<VidasMulti>();
+	}
+
+	/*public override void OnStartLocalPlayer()
+	{
+        vidas = GameObject.Find("VidasMulti").GetComponent<VidasMulti>();
+    }*/
+
+	void Start(){
+		posInicial = transform.position;
+		
+		pivot = GameObject.Find("pivot camara");
+
+		posInicialCamara = pivot.transform.position;
+		posInicialRotation = pivot.transform.rotation;
+
+		vidas = GameObject.Find("VidasMulti").GetComponent<VidasMulti>();
+
+		vidas.BuscarSalida();
 	}
 	
+	void OnPlayerConnected(NetworkPlayer player) {
+        
+    }
+
 	// Update is called once per frame
 	void Update () {
 		//print(vidas.GetPuntas());
@@ -46,7 +68,6 @@ public class ChoquesJugadorMulti : NetworkBehaviour {
 				pivot.transform.position = posInicialCamara;
 				pivot.transform.rotation = posInicialRotation;
 				transform.position = posInicial;
-				//RpcRespawn();
 			}else{
 				CargadorEscenas.CargaEscenaAsync("Menu");
 			}
@@ -68,28 +89,20 @@ public class ChoquesJugadorMulti : NetworkBehaviour {
 		}
 	}
 
-	[ClientRpc]
-	void RpcRespawn()
-	{
-		if (isLocalPlayer)
-		{
-			// move back to zero location
-			transform.position = posInicial;
-		}
-	}
-
 	void OnTriggerEnter(Collider other){
-		
-		if (vidas.GetPuntas() >= 5 && other.gameObject.tag.ToLower().Equals("salida")){
-			CargadorEscenas.CargaEscenaAsync("Menu");
+		//print(vidas.GetPuntas());
+		if (other.gameObject.tag.ToLower().Equals("salida")){
+			if (vidas.GetPuntas() >= 5){
+				CargadorEscenas.CargaEscenaAsync("Menu");
+			}
 		}
 
 		if (other.gameObject.tag.ToLower().Equals("punta")){
 
 			//Si se tienen las 5
-			if (vidas.CogerPunta(other.gameObject)){
-				
-			}
+			
+			//Debug.Log(vidas);
+			vidas.CogerPunta(other.gameObject);
 
 			//sonidos.ReproducirPuntaEstrella(puntas.GetPuntas());
 			//puntas.SumarPunta();

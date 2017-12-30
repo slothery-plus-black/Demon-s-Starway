@@ -10,7 +10,7 @@ TagManager:
   - punta
   - enemigo
   - reproductor
-  - gravedadCircular
+  - vidas
   layers:
   - Default
   - TransparentFX

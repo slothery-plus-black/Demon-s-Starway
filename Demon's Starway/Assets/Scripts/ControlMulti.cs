@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
+using System;
 
 public class ControlMulti : NetworkBehaviour {
 
-	ReproductorSonidos sonidos;
+	ReproductorSonidos sonidos = null;
 	//public AudioClip sonidoSalto;
 
 	List<GameObject> chocando = new List<GameObject>();
@@ -13,7 +14,7 @@ public class ControlMulti : NetworkBehaviour {
 	//List<GameObject> chocandoGravedad = new List<GameObject>();
 	//GameObject ultimaGravedad = null;
 	//public float fuerzaGravitatoriaCircular = 10f;
-	public Transform planeta;
+	public Transform planeta = null;
 	Rigidbody r;
 	//public GameObject planeta;
 	public float fuerzaMovimiento = 0.1f;
@@ -34,34 +35,30 @@ public class ControlMulti : NetworkBehaviour {
 
 	Vector3 fuerzaTotal = Vector3.zero;
 
-	void Awake () {
+	void Start () {
 		r = GetComponent<Rigidbody> ();
 		cam = Camera.main;
 
 		r.maxAngularVelocity = 8;
 		r.maxDepenetrationVelocity = 8;
 
-		sonidos = GameObject.FindGameObjectWithTag("reproductor").GetComponent<ReproductorSonidos>();
-
-		if (planeta == null){
-			planeta = GameObject.Find("planeta").transform;
+		if (isLocalPlayer){
+			Renderer rend = GetComponent<Renderer>();
+			rend.material.shader = Shader.Find("LowPolyShaders/LowPolyPBRShader");
+			rend.material.SetColor("_Color", Color.red);
 		}
-	}
 
-	void Start (){
+		sonidos = GameObject.FindGameObjectWithTag("reproductor").GetComponent<ReproductorSonidos>();
 		sonidos.ReproducirSonidoSpawn();
-	}
 
-	public override void OnStartLocalPlayer()
-	{	
-		Renderer rend = GetComponent<Renderer>();
-        rend.material.shader = Shader.Find("LowPolyShaders/LowPolyPBRShader");
-        rend.material.SetColor("_Color", Color.red);
-		//GetComponent().material.color = Color.blue;
+		planeta = GameObject.Find("planeta").transform;
+		
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate () {
+		//OnStartLocalPlayer();
+		//ComprobarVariables();
 		if (!isLocalPlayer)
 		{
 			return;

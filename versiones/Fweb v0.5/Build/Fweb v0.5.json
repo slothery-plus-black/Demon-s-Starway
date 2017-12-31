@@ -1,0 +1,9 @@
+{
+"TOTAL_MEMORY": 268435456,
+"dataUrl": "Fweb v0.5.data.unityweb",
+"asmCodeUrl": "Fweb v0.5.asm.code.unityweb",
+"asmMemoryUrl": "Fweb v0.5.asm.memory.unityweb",
+"asmFrameworkUrl": "Fweb v0.5.asm.framework.unityweb",
+"splashScreenStyle": "Dark",
+"backgroundColor": "#222C36"
+}

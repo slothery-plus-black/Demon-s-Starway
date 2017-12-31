@@ -18,4 +18,8 @@ public class AngelCircular : MonoBehaviour {
 	void LateUpdate () {
 		transform.RotateAround(puntoRotFinal, direccion,speed * Time.deltaTime);
 	}
+
+	public void Stop(){
+		this.speed = 0;
+	}
 }

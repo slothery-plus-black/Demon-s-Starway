@@ -27,17 +27,10 @@ public AngelCircular script;
 			camera1.transform.position = Vector3.Lerp(camera1.transform.position, MainCamera.transform.position,Time.deltaTime * velTransicion);
 		}
         if(time<=0f) {
-		
-		Switch();
-        }
-
-		 
-    }
-
-	void Switch(){
 		 vidas.SetActive(true);
 		 camera1.enabled = false;
     	 MainCamera.enabled = true; 
-	}
- 
+        }
+ }
+
 }

@@ -13,7 +13,7 @@ public class ChoquesJugador : MonoBehaviour {
 
 	ReproductorSonidos sonidos;
 	
-	public GameObject salida;
+	//public GameObject salida;
 	public GameObject PS_Salida;
 
 	GameObject pivot;
@@ -73,7 +73,7 @@ public class ChoquesJugador : MonoBehaviour {
 			Destroy(other.gameObject);
 			if (puntas.GetPuntas() >= 5){
 				sonidos.ReproducirSonidoSalida();
-				salida.SetActive(true);
+				//salida.SetActive(true);
 				PS_Salida.SetActive(true);
 			}
 		}

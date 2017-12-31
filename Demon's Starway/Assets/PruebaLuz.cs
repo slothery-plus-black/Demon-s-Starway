@@ -12,6 +12,6 @@ public class PruebaLuz : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		transform.Rotate(velTime, velTime,0);
+		RenderSettings.skybox.SetFloat("_Rotation",RenderSettings.skybox.GetFloat("_Rotation")+ velTime);
 	}
 }

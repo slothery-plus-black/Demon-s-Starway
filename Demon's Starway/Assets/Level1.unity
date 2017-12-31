@@ -23,7 +23,7 @@ RenderSettings:
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 4.5
+  m_AmbientIntensity: 2.5
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: 5cb6796e7e6375b4e88dda177c09be5d, type: 2}
@@ -214,17 +214,17 @@ Prefab:
     - target: {fileID: 108817544363605194, guid: 6a8615cbcceab7749bb018eeef737661,
         type: 2}
       propertyPath: m_Color.g
-      value: 0.83034444
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 108817544363605194, guid: 6a8615cbcceab7749bb018eeef737661,
         type: 2}
       propertyPath: m_Color.b
-      value: 0.36764705
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 108817544363605194, guid: 6a8615cbcceab7749bb018eeef737661,
         type: 2}
       propertyPath: m_Intensity
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 108817544363605194, guid: 6a8615cbcceab7749bb018eeef737661,
         type: 2}
@@ -244,12 +244,12 @@ Prefab:
     - target: {fileID: 108817544363605194, guid: 6a8615cbcceab7749bb018eeef737661,
         type: 2}
       propertyPath: m_Color.g
-      value: 0.83034444
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 108817544363605194, guid: 6a8615cbcceab7749bb018eeef737661,
         type: 2}
       propertyPath: m_Color.b
-      value: 0.36764705
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6a8615cbcceab7749bb018eeef737661, type: 2}
@@ -576,7 +576,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3adc90c0b712e4a41bfd85d31de45c97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velTime: 0.15
+  velTime: 0.05
 --- !u!1001 &197381013
 Prefab:
   m_ObjectHideFlags: 0
@@ -1999,7 +1999,7 @@ Transform:
   m_Children:
   - {fileID: 1243293204}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!114 &993501077 stripped
 MonoBehaviour:
@@ -2083,7 +2083,7 @@ Transform:
   - {fileID: 1574889837}
   - {fileID: 501261430}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!114 &1082423363 stripped
 MonoBehaviour:

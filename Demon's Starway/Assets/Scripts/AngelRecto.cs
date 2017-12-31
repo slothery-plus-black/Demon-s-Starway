@@ -40,7 +40,7 @@ public class AngelRecto : MonoBehaviour {
 
 		r.velocity = vel;
 
-		var targetRotation = Quaternion.LookRotation(target - transform.position);
+		var targetRotation = Quaternion.LookRotation(target - transform.position, transform.up);
        
 		transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, velocidad * Time.deltaTime);
 	}

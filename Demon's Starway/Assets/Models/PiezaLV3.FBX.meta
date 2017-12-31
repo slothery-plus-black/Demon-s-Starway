@@ -7,14 +7,23 @@ ModelImporter:
   fileIDToRecycleName:
     100000: //RootNode
     100002: Cesped
+    100004: Cesped2
+    100006: Pieza
     400000: //RootNode
     400002: Cesped
+    400004: Cesped2
+    400006: Pieza
     2300000: //RootNode
     2300002: Cesped
+    2300004: Cesped2
+    2300006: Pieza
     3300000: //RootNode
     3300002: Cesped
+    3300004: Cesped2
+    3300006: Pieza
     4300000: Pieza
     4300002: Cesped
+    4300004: Cesped2
     9500000: //RootNode
   materials:
     importMaterials: 1

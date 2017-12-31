@@ -1809,6 +1809,18 @@ Prefab:
       propertyPath: m_TagString
       value: suelo
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 8af3a28a2d30398469297999953677c0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8f79cf5f56b6f7c4db21be695ddc395d, type: 2}
+    - target: {fileID: 2300002, guid: 8af3a28a2d30398469297999953677c0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a6fd1911f63c8844a93baf7e3f0c7a92, type: 2}
+    - target: {fileID: 2300004, guid: 8af3a28a2d30398469297999953677c0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 44882a6631ad7624f824f48bd83ab019, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8af3a28a2d30398469297999953677c0, type: 3}
   m_IsPrefabParent: 0

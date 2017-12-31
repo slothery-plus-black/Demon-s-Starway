@@ -144,4 +144,10 @@ MonoBehaviour:
   sonidoDanio: {fileID: 8300000, guid: f7b05037d7b954705a74503e188a782c, type: 3}
   sonidoMuerte: {fileID: 8300000, guid: 86c414b9c6d4d472983a1da9cf3b0aaf, type: 3}
   sonidoMenu: {fileID: 8300000, guid: 9657ec8f71481a14f86e7abadddf7a01, type: 3}
+  sonidoClick:
+  - {fileID: 8300000, guid: 27328bfc567b94ffe986dd1fabfaedf9, type: 3}
+  - {fileID: 8300000, guid: 7c3cdb7e895b148f99b4fbefe9adf32d, type: 3}
+  - {fileID: 8300000, guid: 372c1383b449740d7bc76989adfc867c, type: 3}
+  - {fileID: 8300000, guid: f85a3eebe909940a69fc520491347391, type: 3}
+  sonidoRuleta: {fileID: 8300000, guid: 672916e03a18b491196fd7ad634ed67d, type: 3}
   sonidoNivel: {fileID: 8300000, guid: 79bd7e0dd3c6447c9a7cc0cba875c1e2, type: 3}

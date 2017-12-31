@@ -13,7 +13,7 @@ public class ChoquesJugador : MonoBehaviour {
 
 	ReproductorSonidos sonidos;
 	
-	public GameObject salida;
+	//public GameObject salida;
 	public GameObject PS_Salida;
 
 	GameObject pivot;
@@ -39,9 +39,10 @@ public class ChoquesJugador : MonoBehaviour {
 	}
 
 	void ComprobarEnemigo(GameObject other){
-		if (other.tag.ToLower().Equals("enemigo")){
+		if (vidas>0 && other.tag.ToLower().Equals("enemigo")){
 			
 			vidas --;
+			print(vidas);
 			RenderVidas.transform.GetChild(vidas).gameObject.SetActive(false);
 			if (vidas <= 0){
 				sonidos.ReproducirSonidoMuerte();
@@ -73,7 +74,7 @@ public class ChoquesJugador : MonoBehaviour {
 			Destroy(other.gameObject);
 			if (puntas.GetPuntas() >= 5){
 				sonidos.ReproducirSonidoSalida();
-				salida.SetActive(true);
+				//salida.SetActive(true);
 				PS_Salida.SetActive(true);
 			}
 		}

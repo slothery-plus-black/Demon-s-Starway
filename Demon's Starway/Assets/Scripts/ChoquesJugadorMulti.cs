@@ -51,9 +51,6 @@ public class ChoquesJugadorMulti : NetworkBehaviour {
 		vidas.BuscarSalida();
 	}
 	
-	void OnPlayerConnected(NetworkPlayer player) {
-        
-    }
 
 	// Update is called once per frame
 	void Update () {

@@ -43,8 +43,11 @@ public class VirtualJoystick : MonoBehaviour, IDragHandler, IPointerUpHandler, I
 	}
 
 	public virtual void OnPointerUp(PointerEventData ped){
-		inputVector = Vector3.zero;
-		joystickImg.rectTransform.anchoredPosition = Vector3.zero;
+		if (!salto){
+			inputVector = Vector3.zero;
+			joystickImg.rectTransform.anchoredPosition = Vector3.zero;
+		}
+		
 	}
 
 	public float Horizontal(){

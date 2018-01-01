@@ -2986,6 +2986,21 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 114769211627175828, guid: 97088bdeab920bc4d8fbe63dc42c803b,
+        type: 2}
+      propertyPath: controlJugador
+      value: 
+      objectReference: {fileID: 2111635211}
+    - target: {fileID: 114681467355569236, guid: 97088bdeab920bc4d8fbe63dc42c803b,
+        type: 2}
+      propertyPath: controlJugador
+      value: 
+      objectReference: {fileID: 2111635211}
+    - target: {fileID: 114294541903598218, guid: 97088bdeab920bc4d8fbe63dc42c803b,
+        type: 2}
+      propertyPath: controlJugador
+      value: 
+      objectReference: {fileID: 2111635211}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 97088bdeab920bc4d8fbe63dc42c803b, type: 2}
   m_IsPrefabParent: 0
@@ -3742,3 +3757,9 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad77594e52d4c6a42b5b68b5cb15a73e, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &2111635211 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114209555757985310, guid: ad77594e52d4c6a42b5b68b5cb15a73e,
+    type: 2}
+  m_PrefabInternal: {fileID: 2111635210}
+  m_Script: {fileID: 11500000, guid: 25c363a79b6ce1b4086a4f255c7a4f2e, type: 3}

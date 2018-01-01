@@ -168,7 +168,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4977783832967492, guid: 6a8615cbcceab7749bb018eeef737661, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 6.19
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4977783832967492, guid: 6a8615cbcceab7749bb018eeef737661, type: 2}
       propertyPath: m_LocalPosition.z
@@ -209,12 +209,12 @@ Prefab:
     - target: {fileID: 108817544363605194, guid: 6a8615cbcceab7749bb018eeef737661,
         type: 2}
       propertyPath: m_Color.r
-      value: 0.007352948
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 108817544363605194, guid: 6a8615cbcceab7749bb018eeef737661,
         type: 2}
       propertyPath: m_Color.g
-      value: 0.6713999
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 108817544363605194, guid: 6a8615cbcceab7749bb018eeef737661,
         type: 2}
@@ -224,7 +224,7 @@ Prefab:
     - target: {fileID: 108817544363605194, guid: 6a8615cbcceab7749bb018eeef737661,
         type: 2}
       propertyPath: m_Intensity
-      value: 0.25
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 108817544363605194, guid: 6a8615cbcceab7749bb018eeef737661,
         type: 2}
@@ -556,7 +556,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 195544036}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3adc90c0b712e4a41bfd85d31de45c97, type: 3}
   m_Name: 

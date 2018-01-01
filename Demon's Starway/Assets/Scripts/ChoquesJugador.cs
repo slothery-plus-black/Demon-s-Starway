@@ -42,7 +42,7 @@ public class ChoquesJugador : MonoBehaviour {
 		if (vidas>0 && other.tag.ToLower().Equals("enemigo")){
 			
 			vidas --;
-			print(vidas);
+			//print(vidas);
 			RenderVidas.transform.GetChild(vidas).gameObject.SetActive(false);
 			if (vidas <= 0){
 				sonidos.ReproducirSonidoMuerte();

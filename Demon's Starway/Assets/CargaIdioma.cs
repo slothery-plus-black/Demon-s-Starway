@@ -16,7 +16,7 @@ public class CargaIdioma : MonoBehaviour {
 
 		SpriteRenderer spr = GetComponent<SpriteRenderer>();
 
-		switch (PlayerPrefs.GetString("idioma")){
+		switch (PlayerPrefs.GetString("idioma","esp")){
 			case "esp":
 				temp = spriteOriginal;
 			break;

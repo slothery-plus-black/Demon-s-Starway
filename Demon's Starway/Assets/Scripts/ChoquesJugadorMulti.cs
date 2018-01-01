@@ -19,6 +19,8 @@ public class ChoquesJugadorMulti : NetworkBehaviour {
 
 	public GameObject salida;
 
+	NetworkLobbyManager manager;
+
 	//ReproductorSonidos sonidos;
 	
 	//public GameObject salida;
@@ -27,6 +29,8 @@ public class ChoquesJugadorMulti : NetworkBehaviour {
 
 	// Use this for initialization
 	void Awake () {
+		manager = GameObject.Find("LobbyManager").GetComponent<NetworkLobbyManager>();
+
 		puntas = new PuntasEstrella();
 		posInicial = transform.position;
 		
@@ -100,8 +104,16 @@ public class ChoquesJugadorMulti : NetworkBehaviour {
 				//print(vidas.GetPuntas());
 			if (other.gameObject.tag.ToLower().Equals("salida")){
 				if (puntas.GetPuntas() >= 5){
+					
+					//manager
+					
+					manager.StopMatchMaker();
+					NetworkManager.Shutdown();
+					Destroy(manager.gameObject);
+					print(manager.gameObject);
+					
+
 					CargadorEscenas.CargaEscenaAsync("Menu");
-					Network.Disconnect();
 				}
 			}
 

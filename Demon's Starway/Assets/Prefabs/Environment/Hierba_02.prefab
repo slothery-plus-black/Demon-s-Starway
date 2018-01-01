@@ -70,7 +70,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4853909816922052}
-  - component: {fileID: 95981064044995368}
   m_Layer: 0
   m_Name: Hierba_02
   m_TagString: Untagged
@@ -320,20 +319,3 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1552516779938244}
   m_Mesh: {fileID: 4300006, guid: c450778130f438c4fbd39830325976f5, type: 3}
---- !u!95 &95981064044995368
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1908910443982842}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: c450778130f438c4fbd39830325976f5, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1

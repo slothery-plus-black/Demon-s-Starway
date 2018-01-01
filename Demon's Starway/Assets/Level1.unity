@@ -168,7 +168,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4977783832967492, guid: 6a8615cbcceab7749bb018eeef737661, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 6.19
       objectReference: {fileID: 0}
     - target: {fileID: 4977783832967492, guid: 6a8615cbcceab7749bb018eeef737661, type: 2}
       propertyPath: m_LocalPosition.z
@@ -180,15 +180,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4977783832967492, guid: 6a8615cbcceab7749bb018eeef737661, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.9848078
       objectReference: {fileID: 0}
     - target: {fileID: 4977783832967492, guid: 6a8615cbcceab7749bb018eeef737661, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0.17364816
       objectReference: {fileID: 0}
     - target: {fileID: 4977783832967492, guid: 6a8615cbcceab7749bb018eeef737661, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4977783832967492, guid: 6a8615cbcceab7749bb018eeef737661, type: 2}
       propertyPath: m_RootOrder
@@ -200,10 +200,40 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4977783832967492, guid: 6a8615cbcceab7749bb018eeef737661, type: 2}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4977783832967492, guid: 6a8615cbcceab7749bb018eeef737661, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 108817544363605194, guid: 6a8615cbcceab7749bb018eeef737661,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0.007352948
+      objectReference: {fileID: 0}
+    - target: {fileID: 108817544363605194, guid: 6a8615cbcceab7749bb018eeef737661,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0.6713999
+      objectReference: {fileID: 0}
+    - target: {fileID: 108817544363605194, guid: 6a8615cbcceab7749bb018eeef737661,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108817544363605194, guid: 6a8615cbcceab7749bb018eeef737661,
+        type: 2}
+      propertyPath: m_Intensity
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 108817544363605194, guid: 6a8615cbcceab7749bb018eeef737661,
+        type: 2}
+      propertyPath: m_BounceIntensity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108817544363605194, guid: 6a8615cbcceab7749bb018eeef737661,
+        type: 2}
+      propertyPath: m_DrawHalo
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

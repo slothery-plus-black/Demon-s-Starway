@@ -47,6 +47,13 @@ public class ChoquesJugador : MonoBehaviour {
 			if (vidas <= 0){
 				sonidos.ReproducirSonidoMuerte();
 				RenderVidas.transform.GetChild(3).gameObject.SetActive(true);
+
+				pivot.transform.position = posInicialCamara;
+				pivot.transform.rotation = posInicialRotation;
+
+				transform.position = posInicial;
+
+				gameObject.GetComponent<Control>().Muerte();
 				//DeshabilidarMovimientos
 
 				//CargadorEscenas.CargaEscenaAsync("Menu");

@@ -5,6 +5,8 @@ using UnityEngine;
 public class Control : MonoBehaviour {
 
 	ReproductorSonidos sonidos;
+
+	bool muerte = false;
 	//public AudioClip sonidoSalto;
 
 	List<GameObject> chocando = new List<GameObject>();
@@ -59,104 +61,106 @@ public class Control : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		bool tecla = false;
+		if (!muerte){
+			bool tecla = false;
 
-		//Control tactil
-		if (Input.touchCount > 0){
-			float h = joystickMovimiento.Horizontal();
-			float v = joystickMovimiento.Vertical();
+			//Control tactil
+			if (Input.touchCount > 0){
+				float h = joystickMovimiento.Horizontal();
+				float v = joystickMovimiento.Vertical();
 
-			//Debug.Log(h);
-			//Debug.Log(v);
+				//Debug.Log(h);
+				//Debug.Log(v);
 
-			if (h > limiteMovil){
-				AplicarFuerza(movH);
+				if (h > limiteMovil){
+					AplicarFuerza(movH);
 
-				tecla = true;
+					tecla = true;
+				}
+				if (h < -limiteMovil){
+					AplicarFuerza(-movH);
+
+					tecla = true;
+				}
+				if (v > limiteMovil){
+					AplicarFuerza(movV);
+
+					tecla = true;
+				}
+				if (v < -limiteMovil){
+					AplicarFuerza(-movV);
+
+					tecla = true;
+				}
+
+				//AplicarFuerza(joystick.Horizontal());
 			}
-			if (h < -limiteMovil){
+
+			if(!enSuelo){
+				if(TimeOnJump<=2){
+					transform.GetChild(0).gameObject.transform.localScale = new Vector3 (0.75f,1.5f,0.75f);
+					TimeOnJump++;
+				}else if(TimeOnJump==3){
+					transform.GetChild(0).gameObject.transform.localScale = new Vector3 (0.85f,1.25f,0.85f);
+					TimeOnJump++;
+				}
+				else{
+					transform.GetChild(0).gameObject.transform.localScale = new Vector3 (1,1,1);
+				}
+			}else{
+				transform.GetChild(0).gameObject.transform.localScale = new Vector3 (1,1,1);
+				TimeOnJump=0;
+			}
+
+			if (Input.GetKey (KeyCode.A)) {
+				//r.AddForce (-cam.transform.right * fuerza, ForceMode.Impulse);
+				//r.AddForce(-movHorizontal * fuerza, ForceMode.Impulse);
+
 				AplicarFuerza(-movH);
 
 				tecla = true;
 			}
-			if (v > limiteMovil){
+
+			if (Input.GetKey (KeyCode.D)) {
+				//r.AddForce (cam.transform.right * fuerza, ForceMode.Impulse);
+				//r.AddForce(movHorizontal * fuerza, ForceMode.Impulse);
+				
+				AplicarFuerza(movH);
+
+				tecla = true;
+			}
+
+			if (Input.GetKey (KeyCode.W)) {
+				//r.AddForce (cam.transform.up * fuerza, ForceMode.Impulse);
 				AplicarFuerza(movV);
 
 				tecla = true;
 			}
-			if (v < -limiteMovil){
+
+			if (Input.GetKey (KeyCode.S)) {
+				//r.AddForce (-cam.transform.up * fuerza, ForceMode.Impulse);
+
 				AplicarFuerza(-movV);
 
 				tecla = true;
 			}
 
-			//AplicarFuerza(joystick.Horizontal());
-		}
-
-		if(!enSuelo){
-			if(TimeOnJump<=2){
-				transform.GetChild(0).gameObject.transform.localScale = new Vector3 (0.75f,1.5f,0.75f);
-				TimeOnJump++;
-			}else if(TimeOnJump==3){
-				transform.GetChild(0).gameObject.transform.localScale = new Vector3 (0.85f,1.25f,0.85f);
-				TimeOnJump++;
+			if (enSuelo && Input.GetKey (KeyCode.Space)) {
+				sonidos.ReproducirSonidoSalto();
+				AplicarFuerzaSalto(movS, fuerzaSalto);
+				enSuelo = false;
 			}
-			else{
-				transform.GetChild(0).gameObject.transform.localScale = new Vector3 (1,1,1);
+
+			if (fuerzaTotal != Vector3.zero){
+				float f = fuerzaMovimiento;
+				if (!enSuelo)
+					f = fuerzaMovimientoEnAire;
+				AplicarFuerzaFinal(f);
 			}
-		}else{
-			transform.GetChild(0).gameObject.transform.localScale = new Vector3 (1,1,1);
-			TimeOnJump=0;
-		}
 
-		if (Input.GetKey (KeyCode.A)) {
-			//r.AddForce (-cam.transform.right * fuerza, ForceMode.Impulse);
-			//r.AddForce(-movHorizontal * fuerza, ForceMode.Impulse);
-
-			AplicarFuerza(-movH);
-
-			tecla = true;
-		}
-
-		if (Input.GetKey (KeyCode.D)) {
-			//r.AddForce (cam.transform.right * fuerza, ForceMode.Impulse);
-			//r.AddForce(movHorizontal * fuerza, ForceMode.Impulse);
-			
-			AplicarFuerza(movH);
-
-			tecla = true;
-		}
-
-		if (Input.GetKey (KeyCode.W)) {
-			//r.AddForce (cam.transform.up * fuerza, ForceMode.Impulse);
-			AplicarFuerza(movV);
-
-			tecla = true;
-		}
-
-		if (Input.GetKey (KeyCode.S)) {
-			//r.AddForce (-cam.transform.up * fuerza, ForceMode.Impulse);
-
-			AplicarFuerza(-movV);
-
-			tecla = true;
-		}
-
-		if (enSuelo && Input.GetKey (KeyCode.Space)) {
-			sonidos.ReproducirSonidoSalto();
-			AplicarFuerzaSalto(movS, fuerzaSalto);
-			enSuelo = false;
-		}
-
-		if (fuerzaTotal != Vector3.zero){
-			float f = fuerzaMovimiento;
-			if (!enSuelo)
-				f = fuerzaMovimientoEnAire;
-			AplicarFuerzaFinal(f);
-		}
-
-		if (enSuelo && !tecla){
-			r.velocity /= 2;
+			if (enSuelo && !tecla){
+				r.velocity /= 2;
+			}
 		}
 	}
 
@@ -254,5 +258,9 @@ public class Control : MonoBehaviour {
 			r.AddForce (movS * fuerzaSalto, ForceMode.VelocityChange);
 			enSuelo = false;
 		}
+	}
+
+	public void Muerte(){
+		muerte = true;
 	}
 }

@@ -6,13 +6,18 @@ using UnityEngine.Networking;
 public class ChoquesJugadorMulti : NetworkBehaviour {
 
 	//PuntasEstrella puntas = new PuntasEstrella();
-	VidasMulti vidas;
+	//VidasMulti vidas;
+
+	PuntasEstrella puntas;
+	ReproductorSonidos sonidos;
 
 	/*[SyncVar]
 	int vidas = 3;*/
 	Vector3 posInicial;
 	Vector3 posInicialCamara;
 	Quaternion posInicialRotation;
+
+	public GameObject salida;
 
 	//ReproductorSonidos sonidos;
 	
@@ -22,6 +27,7 @@ public class ChoquesJugadorMulti : NetworkBehaviour {
 
 	// Use this for initialization
 	void Awake () {
+		puntas = new PuntasEstrella();
 		posInicial = transform.position;
 		
 		pivot = GameObject.Find("pivot camara");
@@ -29,7 +35,7 @@ public class ChoquesJugadorMulti : NetworkBehaviour {
 		posInicialCamara = pivot.transform.position;
 		posInicialRotation = pivot.transform.rotation;
 
-		//sonidos = GameObject.FindGameObjectWithTag("reproductor").GetComponent<ReproductorSonidos>();
+		sonidos = GameObject.FindGameObjectWithTag("reproductor").GetComponent<ReproductorSonidos>();
 		//vidas = GameObject.Find("VidasMulti").GetComponent<VidasMulti>();
 	}
 
@@ -46,9 +52,12 @@ public class ChoquesJugadorMulti : NetworkBehaviour {
 		posInicialCamara = pivot.transform.position;
 		posInicialRotation = pivot.transform.rotation;
 
-		vidas = GameObject.Find("VidasMulti").GetComponent<VidasMulti>();
+		//vidas = GameObject.Find("VidasMulti").GetComponent<VidasMulti>();
 
-		vidas.BuscarSalida();
+		//vidas.BuscarSalida();
+
+		salida = GameObject.FindGameObjectWithTag("salida");
+		salida.SetActive(false);
 	}
 	
 
@@ -61,13 +70,13 @@ public class ChoquesJugadorMulti : NetworkBehaviour {
 	void ComprobarEnemigo(GameObject other){
 		if (isLocalPlayer && other.tag.ToLower().Equals("enemigo")){
 			
-			if (!vidas.Restar()){
+			//if (!vidas.Restar()){
 				pivot.transform.position = posInicialCamara;
 				pivot.transform.rotation = posInicialRotation;
 				transform.position = posInicial;
-			}else{
-				CargadorEscenas.CargaEscenaAsync("Menu");
-			}
+			//}else{
+				//CargadorEscenas.CargaEscenaAsync("Menu");
+			//}
 			//vidas --;
 
 			/*if (vidas <= 0){
@@ -90,8 +99,9 @@ public class ChoquesJugadorMulti : NetworkBehaviour {
 		if (isLocalPlayer){
 				//print(vidas.GetPuntas());
 			if (other.gameObject.tag.ToLower().Equals("salida")){
-				if (vidas.GetPuntas() >= 5){
+				if (puntas.GetPuntas() >= 5){
 					CargadorEscenas.CargaEscenaAsync("Menu");
+					Network.Disconnect();
 				}
 			}
 
@@ -100,7 +110,16 @@ public class ChoquesJugadorMulti : NetworkBehaviour {
 				//Si se tienen las 5
 				
 				//Debug.Log(vidas);
-				vidas.CogerPunta(other.gameObject);
+				//vidas.CogerPunta(other.gameObject);
+				sonidos.ReproducirPuntaEstrella(puntas.GetPuntas());
+				puntas.SumarPunta();
+				Destroy(other.gameObject);
+
+				if (puntas.GetPuntas()>=5){
+					sonidos.ReproducirSonidoSalida();
+					salida.SetActive(true);
+					//GameObject.Find("Templo").transform.GetChild(1).gameObject.SetActive(true);
+				}
 
 				//sonidos.ReproducirPuntaEstrella(puntas.GetPuntas());
 				//puntas.SumarPunta();

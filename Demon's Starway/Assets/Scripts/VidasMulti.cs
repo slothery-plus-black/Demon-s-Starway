@@ -66,6 +66,8 @@ public class VidasMulti : NetworkBehaviour {
 
 		if (puntas.GetPuntas() >= 5){
 			sonidos.ReproducirSonidoSalida();
+
+			BuscarSalida();
 			salida.SetActive(true);
 			//return true;
 		}
@@ -74,7 +76,7 @@ public class VidasMulti : NetworkBehaviour {
 	}
 
 	public void BuscarSalida(){
-		salida = GameObject.FindGameObjectWithTag("salida");
+		salida = GameObject.Find("Templo").transform.GetChild(1).gameObject;
 	}
 
 	public int GetPuntas(){

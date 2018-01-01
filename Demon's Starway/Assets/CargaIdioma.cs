@@ -4,23 +4,30 @@ using UnityEngine;
 
 public class CargaIdioma : MonoBehaviour {
 
+	string spriteOriginal;
+
 	void Awake () {
+		spriteOriginal = GetComponent<SpriteRenderer>().sprite.name;
 		Cargar();
 	}
 
 	public void Cargar(){
 		string temp = "";
 
+		SpriteRenderer spr = GetComponent<SpriteRenderer>();
+
 		switch (PlayerPrefs.GetString("idioma")){
 			case "esp":
-				temp = gameObject.name;
+				temp = spriteOriginal;
 			break;
 
 			case "eng":
-				temp = gameObject.name+"_eng";
+				temp = spriteOriginal+"_eng";
 			break;
 		}
 
-		GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>(temp);
+		//Debug.Log(temp);
+
+		spr.sprite = Resources.Load<Sprite>(temp);
 	}
 }

@@ -15,7 +15,7 @@ public class ActivadorMovil : MonoBehaviour {
 		#endif
 
 
-		#if UNITY_IPHONE || UNITY_ANDROID
+		#if UNITY_IPHONE || UNITY_ANDROID || UNITY_WEBGL
 			Debug.Log("Movil");
 			gameObject.SetActive(true);
 		#endif

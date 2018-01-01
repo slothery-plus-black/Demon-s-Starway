@@ -72,7 +72,7 @@ public class ChoquesJugador : MonoBehaviour {
 	void OnTriggerEnter(Collider other){
 		
 		if (puntas.GetPuntas() >= 5 && other.gameObject.tag.ToLower().Equals("salida")){
-			CargadorEscenas.CargaEscenaAsync("Menu");
+			CargadorEscenas.CargarSiguienteNivel(CargadorEscenas.CogerNombreEscenaActual());
 		}
 
 		if (other.gameObject.tag.ToLower().Equals("punta")){

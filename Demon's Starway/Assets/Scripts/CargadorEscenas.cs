@@ -22,4 +22,18 @@ public static class CargadorEscenas {
 	public static string CogerNombreEscenaActual(){
 		return SceneManager.GetActiveScene().name.ToLower();
 	}
+
+	public static void CargarSiguienteNivel(string nombre){
+		switch(nombre.ToLower()){
+			case "level1":
+				CargadorEscenas.CargaEscenaAsync("level2");
+				break;
+			case "level2":
+				CargadorEscenas.CargaEscenaAsync("level3");
+				break;
+			case "level3":
+				CargadorEscenas.CargaEscenaAsync("menu");
+				break;
+		}
+	}
 }

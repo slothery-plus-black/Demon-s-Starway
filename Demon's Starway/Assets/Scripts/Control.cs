@@ -32,6 +32,11 @@ public class Control : MonoBehaviour {
 
 	//int triggers = 0;
 
+	float limiteMovil = 0.25f;
+
+	public VirtualJoystick joystickMovimiento;
+	public VirtualJoystick joystickCamara;
+
 	Vector3 fuerzaTotal = Vector3.zero;
 
 	void Awake () {
@@ -55,6 +60,38 @@ public class Control : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
 		bool tecla = false;
+
+		//Control tactil
+		if (Input.touchCount > 0){
+			float h = joystickMovimiento.Horizontal();
+			float v = joystickMovimiento.Vertical();
+
+			//Debug.Log(h);
+			//Debug.Log(v);
+
+			if (h > limiteMovil){
+				AplicarFuerza(movH);
+
+				tecla = true;
+			}
+			if (h < -limiteMovil){
+				AplicarFuerza(-movH);
+
+				tecla = true;
+			}
+			if (v > limiteMovil){
+				AplicarFuerza(movV);
+
+				tecla = true;
+			}
+			if (v < -limiteMovil){
+				AplicarFuerza(-movV);
+
+				tecla = true;
+			}
+
+			//AplicarFuerza(joystick.Horizontal());
+		}
 
 		if(!enSuelo){
 			if(TimeOnJump<=2){
@@ -209,5 +246,13 @@ public class Control : MonoBehaviour {
 
 	void AplicarFuerzaSalto (Vector3 mov, float f){
 		r.AddForce (mov * f, ForceMode.VelocityChange);
-	}	
+	}
+
+	public void AplicarFuerzaSaltoMovil(){
+		if (enSuelo){
+			sonidos.ReproducirSonidoSalto();
+			r.AddForce (movS * fuerzaSalto, ForceMode.VelocityChange);
+			enSuelo = false;
+		}
+	}
 }

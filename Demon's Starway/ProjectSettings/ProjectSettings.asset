@@ -498,7 +498,14 @@ PlayerSettings:
   webGLUseEmbeddedResources: 0
   webGLUseWasm: 0
   webGLCompressionFormat: 1
-  scriptingDefineSymbols: {}
+  scriptingDefineSymbols:
+    1: CROSS_PLATFORM_INPUT
+    4: CROSS_PLATFORM_INPUT;MOBILE_INPUT
+    7: CROSS_PLATFORM_INPUT;MOBILE_INPUT
+    14: MOBILE_INPUT
+    17: MOBILE_INPUT
+    20: MOBILE_INPUT
+    22: MOBILE_INPUT
   platformArchitecture: {}
   scriptingBackend: {}
   incrementalIl2cppBuild: {}
@@ -590,7 +597,7 @@ PlayerSettings:
     ErrorHub: 0
     Hub: 0
     UNet: 1
-  facebookSdkVersion: 7.9.1
+  facebookSdkVersion: 7.10.1
   apiCompatibilityLevel: 2
   cloudProjectId: c4e3226b-f3fc-4860-a096-f1f2cb5e17b7
   projectName: Demon's Starway

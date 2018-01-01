@@ -38,54 +38,83 @@ public class ReproductorSonidos : MonoBehaviour {
 		
 	}
 
-	public void CambiarSonidoFondo(string nivel){
-		au.Stop();
-		switch (nivel){
-			case "menu":
-				au.clip = sonidoMenu;
+	public void CambiarSonidoOnOff(){
+		switch(PlayerPrefs.GetString("sonido","on")){
+			case "off":
+				au.Stop();
 				break;
-			case "level1":
-			case "level2":
-			case "level3":
-				au.clip = sonidoNivel;
+			case "on":
+				au.Stop();
+				CambiarSonidoFondo(CargadorEscenas.CogerNombreEscenaActual());
 				break;
 		}
-		au.Play();
+	}
+
+	public bool HaySonido(){
+		string temp = PlayerPrefs.GetString("sonido","on");
+
+		return (temp.Equals("on"));
+	}
+
+	public void CambiarSonidoFondo(string nivel){
+		if (HaySonido()){
+			au.Stop();
+			switch (nivel){
+				case "menu":
+					au.clip = sonidoMenu;
+					break;
+				case "level1":
+				case "level2":
+				case "level3":
+					au.clip = sonidoNivel;
+					break;
+			}
+			au.Play();
+		}
 	}
 
 	public void ReproducirSonido(AudioClip clip){
-		au.PlayOneShot(clip);
+		if (HaySonido())
+			au.PlayOneShot(clip);
 	}
 
 	public void ReproducirSonidoSpawn(){
-		au.PlayOneShot(sonidoSpawn);
+		if (HaySonido())
+			au.PlayOneShot(sonidoSpawn);
 	}
 
 	public void ReproducirSonidoSalto(){
-		au.PlayOneShot(sonidoSalto);
+		if (HaySonido())
+			au.PlayOneShot(sonidoSalto);
 	}
 
 	public void ReproducirPuntaEstrella(int pos){
-		au.PlayOneShot(sonidoPuntaEstrella[pos]);
+		if (HaySonido())
+			au.PlayOneShot(sonidoPuntaEstrella[pos]);
 	}
 
 	public void ReproducirSonidoSalida(){
-		au.PlayOneShot(sonidoSalida);
+		if (HaySonido())
+			au.PlayOneShot(sonidoSalida);
 	}
 
 	public void ReproducirSonidoDanio(){
-		au.PlayOneShot(sonidoDanio);
+		if (HaySonido())
+			au.PlayOneShot(sonidoDanio);
 	}
 
 	public void ReproducirSonidoMuerte(){
-		au.PlayOneShot(sonidoMuerte);
+		if (HaySonido())
+			au.PlayOneShot(sonidoMuerte);
 	}
 
 	public void ReproducirSonidoClick(int pos){
-		au.PlayOneShot(sonidoClick[pos]);
+		if (HaySonido())
+			au.PlayOneShot(sonidoClick[pos]);
 	}
 
 	public void ReproducirSonidoRuleta(){
-		au.PlayOneShot(sonidoRuleta);
+		if (HaySonido())
+			au.PlayOneShot(sonidoRuleta);
 	}
 }

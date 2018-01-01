@@ -11,6 +11,8 @@ TagManager:
   - enemigo
   - reproductor
   - vidas
+  - gravedadCircular
+  - idioma
   layers:
   - Default
   - TransparentFX

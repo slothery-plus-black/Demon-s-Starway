@@ -28,7 +28,24 @@ public class Camara : MonoBehaviour {
 	}
 
     void Update () {
-        if (Input.touchCount > 0){
+        #if UNITY_EDITOR || UNITY_STANDALONE || UNITY_WEBGL || UNITY_FACEBOOK
+			if (Input.GetMouseButtonDown(0)){
+                MoverCamara(-Input.GetAxis("Mouse X"), -Input.GetAxis("Mouse Y"));
+            }
+
+            if (Input.GetMouseButtonUp(0)){
+                MoverCamara(-Input.GetAxis("Mouse X"), -Input.GetAxis("Mouse Y"));
+            }
+
+            if (Input.GetMouseButton(0)){
+                MoverCamara(-Input.GetAxis("Mouse X"), -Input.GetAxis("Mouse Y"));
+            }
+		#endif
+
+        #if UNITY_IPHONE || UNITY_ANDROID || UNITY_WEBGL
+			MoverCamara(joystick.Horizontal(),joystick.Vertical());
+		#endif
+        /*if (Input.touchCount > 0){
             //Debug.Log("Touch");
             //HandleTouch(Input.touches[0].phase);
 
@@ -46,7 +63,7 @@ public class Camara : MonoBehaviour {
             if (Input.GetMouseButton(0)){
                 MoverCamara(-Input.GetAxis("Mouse X"), -Input.GetAxis("Mouse Y"));
             }
-        }
+        }*/
     }
 
     void FixedUpdate () {

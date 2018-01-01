@@ -64,8 +64,21 @@ public class Control : MonoBehaviour {
 		if (!muerte){
 			bool tecla = false;
 
-			//Control tactil
-			if (Input.touchCount > 0){
+			/*#if UNITY_EDITOR || UNITY_STANDALONE || UNITY_WEBGL || UNITY_FACEBOOK
+				if (Input.GetMouseButtonDown(0)){
+					MoverCamara(-Input.GetAxis("Mouse X"), -Input.GetAxis("Mouse Y"));
+				}
+
+				if (Input.GetMouseButtonUp(0)){
+					MoverCamara(-Input.GetAxis("Mouse X"), -Input.GetAxis("Mouse Y"));
+				}
+
+				if (Input.GetMouseButton(0)){
+					MoverCamara(-Input.GetAxis("Mouse X"), -Input.GetAxis("Mouse Y"));
+				}
+			#endif*/
+
+			#if UNITY_IPHONE || UNITY_ANDROID || UNITY_WEBGL
 				float h = joystickMovimiento.Horizontal();
 				float v = joystickMovimiento.Vertical();
 
@@ -94,7 +107,7 @@ public class Control : MonoBehaviour {
 				}
 
 				//AplicarFuerza(joystick.Horizontal());
-			}
+			#endif
 
 			if(!enSuelo){
 				if(TimeOnJump<=2){

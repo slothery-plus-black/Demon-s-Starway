@@ -7,16 +7,13 @@ using System;
 public class ControlMulti : NetworkBehaviour {
 
 	ReproductorSonidos sonidos = null;
-	//public AudioClip sonidoSalto;
+
+	bool muerte = false;
 
 	List<GameObject> chocando = new List<GameObject>();
 
-	//List<GameObject> chocandoGravedad = new List<GameObject>();
-	//GameObject ultimaGravedad = null;
-	//public float fuerzaGravitatoriaCircular = 10f;
 	public Transform planeta = null;
 	Rigidbody r;
-	//public GameObject planeta;
 	public float fuerzaMovimiento = 0.1f;
 	public float fuerzaMovimientoEnAire = 0.1f;
 	public float fuerzaSalto = 1.0f;
@@ -25,13 +22,13 @@ public class ControlMulti : NetworkBehaviour {
 	Vector3 movH = Vector3.zero;
 	Vector3 movV = Vector3.zero;
 	Vector3 movS = Vector3.zero;
-	//Vector3 movHorizontal = Vector3.zero;
-	//Vector3 movVertical = Vector3.zero;
 
 	bool enSuelo = false;
-	//Lista de cuadrados para ver a donde mira
+	int TimeOnJump = 0;
 
-	//int triggers = 0;
+	float limiteMovil = 0.25f;
+
+	public VirtualJoystick joystickMovimiento;
 
 	Vector3 fuerzaTotal = Vector3.zero;
 
@@ -43,9 +40,9 @@ public class ControlMulti : NetworkBehaviour {
 		r.maxDepenetrationVelocity = 8;
 
 		if (isLocalPlayer){
-			Renderer rend = GetComponent<Renderer>();
-			rend.material.shader = Shader.Find("LowPolyShaders/LowPolyPBRShader");
-			rend.material.SetColor("_Color", Color.red);
+			Renderer rend = transform.GetChild(0).GetChild(2).GetComponent<Renderer>();
+			//transform.GetChild(0).GetChild(2).GetComponent<Renderer>();
+			rend.material = Resources.Load<Material>("BichoMulti");
 		}
 
 		sonidos = GameObject.FindGameObjectWithTag("reproductor").GetComponent<ReproductorSonidos>();
@@ -53,67 +50,100 @@ public class ControlMulti : NetworkBehaviour {
 
 		planeta = GameObject.Find("planeta").transform;
 		
+		#if UNITY_IPHONE || UNITY_ANDROID || UNITY_WEBGL
+			joystickMovimiento = GameObject.Find("FondoJoystickMovimiento").GetComponent<VirtualJoystick>();
+		#endif
+		
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		//OnStartLocalPlayer();
-		//ComprobarVariables();
-		if (!isLocalPlayer)
-		{
-			return;
-		}
+		if (!muerte){
+			if (!isLocalPlayer)
+			{
+				return;
+			}
 
-		bool tecla = false;
+			bool tecla = false;
 
-		if (Input.GetKey (KeyCode.A)) {
-			//r.AddForce (-cam.transform.right * fuerza, ForceMode.Impulse);
-			//r.AddForce(-movHorizontal * fuerza, ForceMode.Impulse);
+			#if UNITY_IPHONE || UNITY_ANDROID || UNITY_WEBGL
+				float h = joystickMovimiento.Horizontal();
+				float v = joystickMovimiento.Vertical();
 
-			AplicarFuerza(-movH);
+				if (h > limiteMovil){
+					AplicarFuerza(movH);
 
-			tecla = true;
-		}
+					tecla = true;
+				}
+				if (h < -limiteMovil){
+					AplicarFuerza(-movH);
 
-		if (Input.GetKey (KeyCode.D)) {
-			//r.AddForce (cam.transform.right * fuerza, ForceMode.Impulse);
-			//r.AddForce(movHorizontal * fuerza, ForceMode.Impulse);
-			
-			AplicarFuerza(movH);
+					tecla = true;
+				}
+				if (v > limiteMovil){
+					AplicarFuerza(movV);
 
-			tecla = true;
-		}
+					tecla = true;
+				}
+				if (v < -limiteMovil){
+					AplicarFuerza(-movV);
 
-		if (Input.GetKey (KeyCode.W)) {
-			//r.AddForce (cam.transform.up * fuerza, ForceMode.Impulse);
-			AplicarFuerza(movV);
+					tecla = true;
+				}
+			#endif
 
-			tecla = true;
-		}
+			if(!enSuelo){
+				if(TimeOnJump<=2){
+					transform.GetChild(0).gameObject.transform.localScale = new Vector3 (0.75f,1.5f,0.75f);
+					TimeOnJump++;
+				}else if(TimeOnJump==3){
+					transform.GetChild(0).gameObject.transform.localScale = new Vector3 (0.85f,1.25f,0.85f);
+					TimeOnJump++;
+				}
+				else{
+					transform.GetChild(0).gameObject.transform.localScale = new Vector3 (1,1,1);
+				}
+			}else{
+				transform.GetChild(0).gameObject.transform.localScale = new Vector3 (1,1,1);
+				TimeOnJump=0;
+			}
 
-		if (Input.GetKey (KeyCode.S)) {
-			//r.AddForce (-cam.transform.up * fuerza, ForceMode.Impulse);
+			if (Input.GetKey (KeyCode.A)) {
+				AplicarFuerza(-movH);
+				tecla = true;
+			}
 
-			AplicarFuerza(-movV);
+			if (Input.GetKey (KeyCode.D)) {
+				AplicarFuerza(movH);
+				tecla = true;
+			}
 
-			tecla = true;
-		}
+			if (Input.GetKey (KeyCode.W)) {
+				AplicarFuerza(movV);
+				tecla = true;
+			}
 
-		if (enSuelo && Input.GetKey (KeyCode.Space)) {
-			sonidos.ReproducirSonidoSalto();
-			AplicarFuerzaSalto(movS, fuerzaSalto);
-			enSuelo = false;
-		}
+			if (Input.GetKey (KeyCode.S)) {
+				AplicarFuerza(-movV);
+				tecla = true;
+			}
 
-		if (fuerzaTotal != Vector3.zero){
-			float f = fuerzaMovimiento;
-			if (!enSuelo)
-				f = fuerzaMovimientoEnAire;
-			AplicarFuerzaFinal(f);
-		}
+			if (enSuelo && Input.GetKey (KeyCode.Space)) {
+				sonidos.ReproducirSonidoSalto();
+				AplicarFuerzaSalto(movS, fuerzaSalto);
+				enSuelo = false;
+			}
 
-		if (enSuelo && !tecla){
-			r.velocity /= 2;
+			if (fuerzaTotal != Vector3.zero){
+				float f = fuerzaMovimiento;
+				if (!enSuelo)
+					f = fuerzaMovimientoEnAire;
+				AplicarFuerzaFinal(f);
+			}
+
+			if (enSuelo && !tecla){
+				r.velocity /= 2;
+			}
 		}
 	}
 
@@ -127,6 +157,7 @@ public class ControlMulti : NetworkBehaviour {
 				enSuelo = true;
 		}
 	}
+
 	void ComprobarSueloSalida(GameObject other){
 		if (other.tag.Equals("suelo")){
 			if (chocando.Contains(other)){
@@ -203,5 +234,17 @@ public class ControlMulti : NetworkBehaviour {
 
 	void AplicarFuerzaSalto (Vector3 mov, float f){
 		r.AddForce (mov * f, ForceMode.VelocityChange);
-	}	
+	}
+
+	public void AplicarFuerzaSaltoMovil(){
+		if (enSuelo){
+			sonidos.ReproducirSonidoSalto();
+			r.AddForce (movS * fuerzaSalto, ForceMode.VelocityChange);
+			enSuelo = false;
+		}
+	}
+
+	public void Muerte(){
+		muerte = true;
+	}
 }

@@ -7,16 +7,11 @@ public class Control : MonoBehaviour {
 	ReproductorSonidos sonidos;
 
 	bool muerte = false;
-	//public AudioClip sonidoSalto;
 
 	List<GameObject> chocando = new List<GameObject>();
 
-	//List<GameObject> chocandoGravedad = new List<GameObject>();
-	//GameObject ultimaGravedad = null;
-	//public float fuerzaGravitatoriaCircular = 10f;
 	public Transform planeta;
 	Rigidbody r;
-	//public GameObject planeta;
 	public float fuerzaMovimiento = 0.1f;
 	public float fuerzaMovimientoEnAire = 0.1f;
 	public float fuerzaSalto = 1.0f;
@@ -25,19 +20,13 @@ public class Control : MonoBehaviour {
 	Vector3 movH = Vector3.zero;
 	Vector3 movV = Vector3.zero;
 	Vector3 movS = Vector3.zero;
-	//Vector3 movHorizontal = Vector3.zero;
-	//Vector3 movVertical = Vector3.zero;
 
 	bool enSuelo = false;
 	int TimeOnJump = 0;
-	//Lista de cuadrados para ver a donde mira
-
-	//int triggers = 0;
 
 	float limiteMovil = 0.25f;
 
 	public VirtualJoystick joystickMovimiento;
-	//public VirtualJoystick joystickCamara;
 
 	Vector3 fuerzaTotal = Vector3.zero;
 
@@ -64,26 +53,9 @@ public class Control : MonoBehaviour {
 		if (!muerte){
 			bool tecla = false;
 
-			/*#if UNITY_EDITOR || UNITY_STANDALONE || UNITY_WEBGL || UNITY_FACEBOOK
-				if (Input.GetMouseButtonDown(0)){
-					MoverCamara(-Input.GetAxis("Mouse X"), -Input.GetAxis("Mouse Y"));
-				}
-
-				if (Input.GetMouseButtonUp(0)){
-					MoverCamara(-Input.GetAxis("Mouse X"), -Input.GetAxis("Mouse Y"));
-				}
-
-				if (Input.GetMouseButton(0)){
-					MoverCamara(-Input.GetAxis("Mouse X"), -Input.GetAxis("Mouse Y"));
-				}
-			#endif*/
-
 			#if UNITY_IPHONE || UNITY_ANDROID || UNITY_WEBGL
 				float h = joystickMovimiento.Horizontal();
 				float v = joystickMovimiento.Vertical();
-
-				//Debug.Log(h);
-				//Debug.Log(v);
 
 				if (h > limiteMovil){
 					AplicarFuerza(movH);
@@ -105,8 +77,6 @@ public class Control : MonoBehaviour {
 
 					tecla = true;
 				}
-
-				//AplicarFuerza(joystick.Horizontal());
 			#endif
 
 			if(!enSuelo){
@@ -126,35 +96,22 @@ public class Control : MonoBehaviour {
 			}
 
 			if (Input.GetKey (KeyCode.A)) {
-				//r.AddForce (-cam.transform.right * fuerza, ForceMode.Impulse);
-				//r.AddForce(-movHorizontal * fuerza, ForceMode.Impulse);
-
 				AplicarFuerza(-movH);
-
 				tecla = true;
 			}
 
 			if (Input.GetKey (KeyCode.D)) {
-				//r.AddForce (cam.transform.right * fuerza, ForceMode.Impulse);
-				//r.AddForce(movHorizontal * fuerza, ForceMode.Impulse);
-				
 				AplicarFuerza(movH);
-
 				tecla = true;
 			}
 
 			if (Input.GetKey (KeyCode.W)) {
-				//r.AddForce (cam.transform.up * fuerza, ForceMode.Impulse);
 				AplicarFuerza(movV);
-
 				tecla = true;
 			}
 
 			if (Input.GetKey (KeyCode.S)) {
-				//r.AddForce (-cam.transform.up * fuerza, ForceMode.Impulse);
-
 				AplicarFuerza(-movV);
-
 				tecla = true;
 			}
 
@@ -187,6 +144,7 @@ public class Control : MonoBehaviour {
 				enSuelo = true;
 		}
 	}
+	
 	void ComprobarSueloSalida(GameObject other){
 		if (other.tag.Equals("suelo")){
 			if (chocando.Contains(other)){

@@ -58,9 +58,10 @@ public class ReproductorSonidos : MonoBehaviour {
 
 	public void CambiarSonidoFondo(string nivel){
 		if (HaySonido()){
-			au.Stop();
+			AudioClip antiguo = au.clip;
 			switch (nivel){
 				case "menu":
+				case "lobbymultijugador":
 					au.clip = sonidoMenu;
 					break;
 				case "level1":
@@ -69,7 +70,11 @@ public class ReproductorSonidos : MonoBehaviour {
 					au.clip = sonidoNivel;
 					break;
 			}
-			au.Play();
+			if (au.clip != antiguo){
+				au.Stop();
+				au.Play();
+			}
+			
 		}
 	}
 

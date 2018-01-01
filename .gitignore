@@ -16,6 +16,9 @@
 
 **/.vscode/*
 
+**/FacebookSDK.meta
+**/FacebookSDK/**
+
 # OS Generated
 # ============
 .DS_Store

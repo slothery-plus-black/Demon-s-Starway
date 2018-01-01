@@ -59,7 +59,7 @@ public class ChoquesJugadorMulti : NetworkBehaviour {
 	}
 
 	void ComprobarEnemigo(GameObject other){
-		if (other.tag.ToLower().Equals("enemigo")){
+		if (isLocalPlayer && other.tag.ToLower().Equals("enemigo")){
 			
 			if (!vidas.Restar()){
 				pivot.transform.position = posInicialCamara;
@@ -87,30 +87,33 @@ public class ChoquesJugadorMulti : NetworkBehaviour {
 	}
 
 	void OnTriggerEnter(Collider other){
-		//print(vidas.GetPuntas());
-		if (other.gameObject.tag.ToLower().Equals("salida")){
-			if (vidas.GetPuntas() >= 5){
-				CargadorEscenas.CargaEscenaAsync("Menu");
+		if (isLocalPlayer){
+				//print(vidas.GetPuntas());
+			if (other.gameObject.tag.ToLower().Equals("salida")){
+				if (vidas.GetPuntas() >= 5){
+					CargadorEscenas.CargaEscenaAsync("Menu");
+				}
 			}
+
+			if (other.gameObject.tag.ToLower().Equals("punta")){
+
+				//Si se tienen las 5
+				
+				//Debug.Log(vidas);
+				vidas.CogerPunta(other.gameObject);
+
+				//sonidos.ReproducirPuntaEstrella(puntas.GetPuntas());
+				//puntas.SumarPunta();
+				//Destroy(other.gameObject);
+				/*if (puntas.GetPuntas() >= 5){
+					sonidos.ReproducirSonidoSalida();
+					salida.SetActive(true);
+				}*/
+			}
+
+			ComprobarEnemigo(other.gameObject);
 		}
-
-		if (other.gameObject.tag.ToLower().Equals("punta")){
-
-			//Si se tienen las 5
-			
-			//Debug.Log(vidas);
-			vidas.CogerPunta(other.gameObject);
-
-			//sonidos.ReproducirPuntaEstrella(puntas.GetPuntas());
-			//puntas.SumarPunta();
-			//Destroy(other.gameObject);
-			/*if (puntas.GetPuntas() >= 5){
-				sonidos.ReproducirSonidoSalida();
-				salida.SetActive(true);
-			}*/
-		}
-
-		ComprobarEnemigo(other.gameObject);
+		
 	}
 
 	void OnCollisionEnter(Collision other){

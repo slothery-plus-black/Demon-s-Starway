@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.050928377, g: 0.0763701, b: 0.12743095, a: 1}
+  m_IndirectSpecularColor: {r: 0.19869009, g: 0.2706146, b: 0.3830745, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -452,43 +452,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a74bd8093e93ec9409ac244e47f8a183, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &217006090 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1632422172355954, guid: a74bd8093e93ec9409ac244e47f8a183,
-    type: 2}
-  m_PrefabInternal: {fileID: 797811928}
---- !u!114 &217006096
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 217006090}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SceneId:
-    m_Value: 0
-  m_AssetId:
-    i0: 167
-    i1: 75
-    i2: 216
-    i3: 9
-    i4: 62
-    i5: 147
-    i6: 236
-    i7: 148
-    i8: 9
-    i9: 172
-    i10: 36
-    i11: 78
-    i12: 71
-    i13: 248
-    i14: 161
-    i15: 131
-  m_ServerOnly: 0
-  m_LocalPlayerAuthority: 0
 --- !u!1001 &260220627
 Prefab:
   m_ObjectHideFlags: 0
@@ -2374,43 +2337,6 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224850302074674478, guid: 97088bdeab920bc4d8fbe63dc42c803b,
     type: 2}
   m_PrefabInternal: {fileID: 996871022}
---- !u!1 &916198285 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1632422172355954, guid: a74bd8093e93ec9409ac244e47f8a183,
-    type: 2}
-  m_PrefabInternal: {fileID: 137325206}
---- !u!114 &916198286
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 916198285}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SceneId:
-    m_Value: 0
-  m_AssetId:
-    i0: 167
-    i1: 75
-    i2: 216
-    i3: 9
-    i4: 62
-    i5: 147
-    i6: 236
-    i7: 148
-    i8: 9
-    i9: 172
-    i10: 36
-    i11: 78
-    i12: 71
-    i13: 248
-    i14: 161
-    i15: 131
-  m_ServerOnly: 0
-  m_LocalPlayerAuthority: 0
 --- !u!1001 &927405613
 Prefab:
   m_ObjectHideFlags: 0
@@ -2507,43 +2433,6 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 821ac9e8894485b489c8c8768d3a1a1a, type: 3}
---- !u!1 &976055270 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1632422172355954, guid: a74bd8093e93ec9409ac244e47f8a183,
-    type: 2}
-  m_PrefabInternal: {fileID: 285132455}
---- !u!114 &976055271
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 976055270}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SceneId:
-    m_Value: 0
-  m_AssetId:
-    i0: 167
-    i1: 75
-    i2: 216
-    i3: 9
-    i4: 62
-    i5: 147
-    i6: 236
-    i7: 148
-    i8: 9
-    i9: 172
-    i10: 36
-    i11: 78
-    i12: 71
-    i13: 248
-    i14: 161
-    i15: 131
-  m_ServerOnly: 0
-  m_LocalPlayerAuthority: 0
 --- !u!1001 &996871022
 Prefab:
   m_ObjectHideFlags: 0
@@ -4187,43 +4076,6 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: fb6904426af07c04ea611a6296a478ad, type: 3}
---- !u!1 &2001766400 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1632422172355954, guid: a74bd8093e93ec9409ac244e47f8a183,
-    type: 2}
-  m_PrefabInternal: {fileID: 1775645101}
---- !u!114 &2001766401
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2001766400}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SceneId:
-    m_Value: 0
-  m_AssetId:
-    i0: 167
-    i1: 75
-    i2: 216
-    i3: 9
-    i4: 62
-    i5: 147
-    i6: 236
-    i7: 148
-    i8: 9
-    i9: 172
-    i10: 36
-    i11: 78
-    i12: 71
-    i13: 248
-    i14: 161
-    i15: 131
-  m_ServerOnly: 0
-  m_LocalPlayerAuthority: 0
 --- !u!1001 &2008179259
 Prefab:
   m_ObjectHideFlags: 0
@@ -4416,43 +4268,6 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 821ac9e8894485b489c8c8768d3a1a1a, type: 3}
---- !u!1 &2049012764 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1632422172355954, guid: a74bd8093e93ec9409ac244e47f8a183,
-    type: 2}
-  m_PrefabInternal: {fileID: 1818784274}
---- !u!114 &2049012770
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2049012764}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SceneId:
-    m_Value: 0
-  m_AssetId:
-    i0: 167
-    i1: 75
-    i2: 216
-    i3: 9
-    i4: 62
-    i5: 147
-    i6: 236
-    i7: 148
-    i8: 9
-    i9: 172
-    i10: 36
-    i11: 78
-    i12: 71
-    i13: 248
-    i14: 161
-    i15: 131
-  m_ServerOnly: 0
-  m_LocalPlayerAuthority: 0
 --- !u!1001 &2060131563
 Prefab:
   m_ObjectHideFlags: 0

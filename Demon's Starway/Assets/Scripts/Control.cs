@@ -37,7 +37,7 @@ public class Control : MonoBehaviour {
 	float limiteMovil = 0.25f;
 
 	public VirtualJoystick joystickMovimiento;
-	public VirtualJoystick joystickCamara;
+	//public VirtualJoystick joystickCamara;
 
 	Vector3 fuerzaTotal = Vector3.zero;
 

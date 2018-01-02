@@ -267,7 +267,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camera1: {fileID: 196199117}
   MainCamera: {fileID: 596701822}
-  CountdownFrom: 12
+  CountdownFrom: 5
   vidas: {fileID: 1613089291}
   velTransicion: 2
   script: {fileID: 0}

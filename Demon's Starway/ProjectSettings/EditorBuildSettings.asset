@@ -17,10 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Level3.unity
     guid: a3e992aa10211c340be9f54d00009449
-  - enabled: 1
+  - enabled: 0
     path: Assets/LobbyMultijugador.unity
     guid: 293ad83b9d469014b88dbc02c49d1a8b
-  - enabled: 1
+  - enabled: 0
     path: Assets/prueba multi.unity
     guid: 5041b48d70c2884498e117915aba2036
   - enabled: 0
@@ -29,7 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/multi.unity
     guid: 4b546aaf325a13541998c30cc1e0cbee
-  - enabled: 1
+  - enabled: 0
     path: Assets/multiFinal.unity
     guid: c38e0b28c5752c44bb73626b1a9c63fd
   - enabled: 1

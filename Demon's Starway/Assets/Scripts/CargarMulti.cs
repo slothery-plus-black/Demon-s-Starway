@@ -15,6 +15,6 @@ public class CargarMulti : MonoBehaviour {
 	}
 
 	void OnMouseDown(){
-		CargadorEscenas.CargaEscenaAsync("LobbyMultijugador");
+		CargadorEscenas.CargaEscenaAsync("LobbyPersonalizado");
 	}
 }

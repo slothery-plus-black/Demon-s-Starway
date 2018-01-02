@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Intruction_B : MonoBehaviour {
 
+	public GameObject object;
 	// Use this for initialization
 	void Start () {
 		

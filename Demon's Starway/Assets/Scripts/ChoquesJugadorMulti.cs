@@ -61,7 +61,10 @@ public class ChoquesJugadorMulti : NetworkBehaviour {
 		//vidas.BuscarSalida();
 
 		salida = GameObject.FindGameObjectWithTag("salida");
-		salida.SetActive(false);
+		for (int i=0; i < salida.transform.childCount;i++){
+			salida.transform.GetChild(i).gameObject.SetActive(false);
+		}
+		
 	}
 	
 
@@ -129,7 +132,9 @@ public class ChoquesJugadorMulti : NetworkBehaviour {
 
 				if (puntas.GetPuntas()>=5){
 					sonidos.ReproducirSonidoSalida();
-					salida.SetActive(true);
+					for (int i=0; i < salida.transform.childCount;i++){
+						salida.transform.GetChild(i).gameObject.SetActive(true);
+					}
 					//GameObject.Find("Templo").transform.GetChild(1).gameObject.SetActive(true);
 				}
 

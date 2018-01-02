@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class Intruction_B : MonoBehaviour {
 
-	//cambiar a 1 para ingles
-	private int idioma =0;
-
 	// Use this for initialization
 	void Start () {
 		

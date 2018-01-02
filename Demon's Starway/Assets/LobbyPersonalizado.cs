@@ -6,6 +6,12 @@ using UnityEngine.Networking.Match;
 
 public class LobbyPersonalizado : NetworkLobbyManager {
 
+	void Awake(){
+		if (GameObject.FindGameObjectsWithTag("lobby").Length > 1){
+			Destroy(this.gameObject);
+		}
+	}
+
 	// Use this for initialization
 	void Start () {
 		//Buscar();

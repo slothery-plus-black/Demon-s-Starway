@@ -18,11 +18,15 @@ public class VolverDeLobby : MonoBehaviour {
 	}
 
 	void OnMouseDown(){
-		CargadorEscenas.CargaEscenaAsync("Menu");
-		manager.StopMatchMaker();
+		//Destroy(manager);
+            //NetworkManager.Shutdown();
+			//Network.Disconnect();
+			manager.StopHost();
+		/*manager.StopMatchMaker();
 		manager.StopClient();
 		manager.StopHost();
-		Destroy(manager.gameObject.GetComponent<NetworkManager>());
+		Destroy(manager.gameObject.GetComponent<NetworkManager>());*/
+		//CargadorEscenas.CargaEscenaAsync("Menu");
 		
 	}
 }

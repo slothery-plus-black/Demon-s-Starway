@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class PuntasEstrella {
 
-	int puntasEstrella = 0;
+	public int puntasEstrella = 0;
 
 	public void SumarPunta(){
 		puntasEstrella++;

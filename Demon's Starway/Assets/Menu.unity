@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.080288194, g: 0.111517854, b: 0.1744366, a: 1}
+  m_IndirectSpecularColor: {r: 0.12967002, g: 0.1853756, b: 0.27574214, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1506,6 +1506,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edf6064edca5cbe4994e78926313d84f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fondo: {fileID: 635028205}
+  spriteCambio: {fileID: 21300000, guid: 812effbdebfdf456cacad116fc655e39, type: 3}
+  spriteCambio_eng: {fileID: 21300000, guid: ed1749210a834f048ad0c7a791d84f49, type: 3}
 --- !u!1 &204182674
 GameObject:
   m_ObjectHideFlags: 0
@@ -1868,6 +1871,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edf6064edca5cbe4994e78926313d84f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fondo: {fileID: 635028205}
+  spriteCambio: {fileID: 21300000, guid: 728771c4d6f6041b6b2cc9b787930393, type: 3}
+  spriteCambio_eng: {fileID: 21300000, guid: 18cce5834e569eb46bd97beb30429bfe, type: 3}
 --- !u!1 &225744585
 GameObject:
   m_ObjectHideFlags: 0
@@ -3118,6 +3124,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edf6064edca5cbe4994e78926313d84f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fondo: {fileID: 635028205}
+  spriteCambio: {fileID: 21300000, guid: e16dca934dace460282b12b09f86f34e, type: 3}
+  spriteCambio_eng: {fileID: 21300000, guid: 9d8c39eeabf9d474b9ddfa10d1eb0305, type: 3}
 --- !u!1 &490756855
 GameObject:
   m_ObjectHideFlags: 0
@@ -4239,9 +4248,8 @@ GameObject:
   m_Component:
   - component: {fileID: 635028206}
   - component: {fileID: 635028208}
-  - component: {fileID: 635028207}
   m_Layer: 0
-  m_Name: camara
+  m_Name: fondo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4254,27 +4262,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 635028205}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -50.8, y: 42, z: -0}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalPosition: {x: -52, y: 59.7, z: -0}
+  m_LocalScale: {x: 20, y: 20, z: 1}
   m_Children: []
   m_Father: {fileID: 1914645658}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &635028207
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 635028205}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e38c71c4433204585935f8fa6ace0d8e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemigos: {fileID: 21300000, guid: 728771c4d6f6041b6b2cc9b787930393, type: 3}
-  camara: {fileID: 21300000, guid: 812effbdebfdf456cacad116fc655e39, type: 3}
-  movimiento: {fileID: 21300000, guid: e16dca934dace460282b12b09f86f34e, type: 3}
-  objetivo: {fileID: 21300000, guid: 9de0290a33d484373861acbc8da0527b, type: 3}
 --- !u!212 &635028208
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11208,6 +11201,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edf6064edca5cbe4994e78926313d84f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fondo: {fileID: 635028205}
+  spriteCambio: {fileID: 21300000, guid: 9de0290a33d484373861acbc8da0527b, type: 3}
+  spriteCambio_eng: {fileID: 21300000, guid: e7e40517e91f4a24ab8e9b96b2b5f76f, type: 3}
 --- !u!1 &1849295941
 GameObject:
   m_ObjectHideFlags: 0
@@ -13721,10 +13717,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e38c71c4433204585935f8fa6ace0d8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemigos: {fileID: 0}
-  camara: {fileID: 0}
-  movimiento: {fileID: 0}
-  objetivo: {fileID: 0}
 --- !u!114 &2145756563
 MonoBehaviour:
   m_ObjectHideFlags: 0

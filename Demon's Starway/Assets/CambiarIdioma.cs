@@ -4,48 +4,59 @@ using UnityEngine;
 
 public class CambiarIdioma : MonoBehaviour {
 
-	int numIdiomas = 2;
+	public string idioma;
+	public GameObject otro;
+	Collider2D c, cOtro;
+	SpriteRenderer r, rOtro;
+
+	//int numIdiomas = 2;
 	//string[] idiomas = new string[] {"esp","eng"};
-	int n = 0;
+	//int n = 0;
 
 	// Use this for initialization
 	void Awake () {
-		switch (PlayerPrefs.GetString("idioma","esp")){
-			case "esp":
-				n = 0;
-			break;
+		r= GetComponent<SpriteRenderer>();
+		c = GetComponent<Collider2D>();
+		cOtro = otro.GetComponent<Collider2D>();
+		rOtro = otro.GetComponent<SpriteRenderer>();
 
-			case "eng":
-				n = 1;
-			break;
-		}
+		Ocultar();
 	}
 
 	void OnMouseDown(){
-		n++;
+		//n++;
 		Cambio();
 	}
 
 	void Cambio(){
-		if (n >= numIdiomas){
-			n = 0;
-		}
 
-		switch (n){
-			case 0:
-				PlayerPrefs.SetString("idioma","esp");
-		
-			break;
-
-			case 1:
-				PlayerPrefs.SetString("idioma","eng");
-			break;
-		}
+		PlayerPrefs.SetString("idioma",idioma);
 
 		PlayerPrefs.Save();
 
 		foreach (GameObject o in GameObject.FindGameObjectsWithTag("idioma")){
 			o.GetComponent<CargaIdioma>().Cargar();
+		}
+
+		foreach (GameObject o in GameObject.FindGameObjectsWithTag("idioma_texto")){
+			o.GetComponent<CargaIdiomaTexto>().Cargar();
+		}
+
+		Ocultar();
+	}
+
+	void Ocultar(){
+		//print(idiomacargado);
+		if (PlayerPrefs.GetString("idioma","esp").Equals(idioma)){
+			c.enabled = false;
+			r.enabled = false;
+
+			transform.GetChild(0).gameObject.SetActive(false);
+
+			rOtro.enabled = true;
+			cOtro.enabled = true;
+
+			otro.transform.GetChild(0).gameObject.SetActive(true);
 		}
 	}
 }

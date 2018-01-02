@@ -15,7 +15,7 @@ public class CargaIdiomaTexto : MonoBehaviour {
 	public void Cargar(){
 		string temp = "";
 
-		SpriteRenderer spr = GetComponent<SpriteRenderer>();
+		//UnityEngine.UI.Text spr = GetComponent<UnityEngine.UI.Text>();
 
 		switch (PlayerPrefs.GetString("idioma","esp")){
 			case "esp":
@@ -29,6 +29,6 @@ public class CargaIdiomaTexto : MonoBehaviour {
 
 		//Debug.Log(temp);
 		GetComponent<UnityEngine.UI.Text>().text = temp;
-		spr.sprite = Resources.Load<Sprite>(temp);
+		//spr.sprite = Resources.Load<Sprite>(temp);
 	}
 }

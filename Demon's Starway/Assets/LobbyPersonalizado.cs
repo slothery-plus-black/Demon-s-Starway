@@ -6,10 +6,14 @@ using UnityEngine.Networking.Match;
 
 public class LobbyPersonalizado : NetworkLobbyManager {
 
+	SpriteRenderer r;
+
 	void Awake(){
 		if (GameObject.FindGameObjectsWithTag("lobby").Length > 1){
 			Destroy(this.gameObject);
 		}
+
+		r = GetComponent<SpriteRenderer>();
 	}
 
 	// Use this for initialization
@@ -91,6 +95,7 @@ public class LobbyPersonalizado : NetworkLobbyManager {
 	}
 
 	void OnMouseDown(){
+		r.enabled = false;
 		Buscar();
 	}
 }

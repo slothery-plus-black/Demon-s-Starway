@@ -104,16 +104,17 @@ public class ChoquesJugadorMulti : NetworkBehaviour {
 					
 					//manager
 					
-					manager.StopMatchMaker();
-					NetworkManager.Shutdown();
-					Destroy(manager.gameObject);
+					//manager.StopMatchMaker();
+					//NetworkManager.Shutdown();
+					//Destroy(manager.gameObject);
 					//print(manager.gameObject);
 					
 					Network.Disconnect ();
 					Destroy (manager.gameObject);
+					Destroy(GameObject.Find("LobbyPlayer(Clone)"));
 					//GameManager.gameManager.MainLoadScene ("scene00"); // SCENE SUIVANTE
 
-					CargadorEscenas.CargaEscenaAsync("Menu");
+					CargadorEscenas.CargaEscenaAsync("multiFinal");
 				}
 			}
 

@@ -40,13 +40,7 @@ public class ChoquesJugadorMulti : NetworkBehaviour {
 		posInicialRotation = pivot.transform.rotation;
 
 		sonidos = GameObject.FindGameObjectWithTag("reproductor").GetComponent<ReproductorSonidos>();
-		//vidas = GameObject.Find("VidasMulti").GetComponent<VidasMulti>();
 	}
-
-	/*public override void OnStartLocalPlayer()
-	{
-        vidas = GameObject.Find("VidasMulti").GetComponent<VidasMulti>();
-    }*/
 
 	void Start(){
 		posInicial = transform.position;
@@ -113,8 +107,11 @@ public class ChoquesJugadorMulti : NetworkBehaviour {
 					manager.StopMatchMaker();
 					NetworkManager.Shutdown();
 					Destroy(manager.gameObject);
-					print(manager.gameObject);
+					//print(manager.gameObject);
 					
+					Network.Disconnect ();
+					Destroy (manager.gameObject);
+					//GameManager.gameManager.MainLoadScene ("scene00"); // SCENE SUIVANTE
 
 					CargadorEscenas.CargaEscenaAsync("Menu");
 				}
@@ -135,22 +132,26 @@ public class ChoquesJugadorMulti : NetworkBehaviour {
 					for (int i=0; i < salida.transform.childCount;i++){
 						salida.transform.GetChild(i).gameObject.SetActive(true);
 					}
-					//GameObject.Find("Templo").transform.GetChild(1).gameObject.SetActive(true);
 				}
 
-				//sonidos.ReproducirPuntaEstrella(puntas.GetPuntas());
-				//puntas.SumarPunta();
-				//Destroy(other.gameObject);
-				/*if (puntas.GetPuntas() >= 5){
-					sonidos.ReproducirSonidoSalida();
-					salida.SetActive(true);
-				}*/
 			}
 
 			ComprobarEnemigo(other.gameObject);
 		}
 		
 	}
+
+	void OnDisconnectedFromServer(NetworkDisconnection info) {
+        if (Network.isServer)
+            Debug.Log("Local server connection disconnected");
+        else
+            if (info == NetworkDisconnection.LostConnection)
+                Debug.Log("Lost connection to the server");
+            else
+                Debug.Log("Successfully diconnected from the server");
+
+		CargadorEscenas.CargaEscenaAsync("multiFinal");
+    }
 
 	void OnCollisionEnter(Collision other){
 		ComprobarEnemigo(other.gameObject);

@@ -66,6 +66,17 @@ public class ChoquesJugadorMulti : NetworkBehaviour {
 	void Update () {
 		//print(vidas.GetPuntas());
 		//print(posInicialCamara.position);
+		if (Input.GetKeyDown("f")){
+			CargadorEscenas.CargaEscenaAsync("multiFinal");
+			//Network.Disconnect ();
+			
+			Destroy(GameObject.Find("LobbyPlayer(Clone)").gameObject);
+			Destroy (manager.gameObject);
+			//manager.StopHost();
+			//manager.StopAllCoroutines();
+
+			//CargadorEscenas.CargaEscenaAsync("multiFinal");
+		}
 	}
 
 	void ComprobarEnemigo(GameObject other){
@@ -102,19 +113,11 @@ public class ChoquesJugadorMulti : NetworkBehaviour {
 			if (other.gameObject.tag.ToLower().Equals("salida")){
 				if (puntas.GetPuntas() >= 5){
 					
-					//manager
-					
-					//manager.StopMatchMaker();
-					//NetworkManager.Shutdown();
-					//Destroy(manager.gameObject);
-					//print(manager.gameObject);
-					
-					Network.Disconnect ();
-					Destroy (manager.gameObject);
-					Destroy(GameObject.Find("LobbyPlayer(Clone)"));
-					//GameManager.gameManager.MainLoadScene ("scene00"); // SCENE SUIVANTE
-
 					CargadorEscenas.CargaEscenaAsync("multiFinal");
+					//Network.Disconnect ();
+					
+					Destroy(GameObject.Find("LobbyPlayer(Clone)").gameObject);
+					Destroy (manager.gameObject);
 				}
 			}
 
@@ -151,7 +154,7 @@ public class ChoquesJugadorMulti : NetworkBehaviour {
             else
                 Debug.Log("Successfully diconnected from the server");
 
-		CargadorEscenas.CargaEscenaAsync("multiFinal");
+		//CargadorEscenas.CargaEscenaAsync("multiFinal");
     }
 
 	void OnCollisionEnter(Collision other){

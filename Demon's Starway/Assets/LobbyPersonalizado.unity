@@ -285,7 +285,7 @@ MonoBehaviour:
   m_ShowLobbyGUI: 1
   m_MaxPlayers: 2
   m_MaxPlayersPerConnection: 1
-  m_MinPlayers: 2
+  m_MinPlayers: 0
   m_LobbyPlayerPrefab: {fileID: 114202711580067272, guid: 67cf0ce9036c6104dbf02ea513958847,
     type: 2}
   m_GamePlayerPrefab: {fileID: 1460635272845092, guid: 31ca0c60a4798964db52f71ea9e9a6b9,
@@ -293,6 +293,7 @@ MonoBehaviour:
   m_LobbyScene: LobbyPersonalizado
   m_PlayScene: multi
   lobbySlots: []
+  texto: {fileID: 1898389406}
 --- !u!224 &601232974
 RectTransform:
   m_ObjectHideFlags: 0
@@ -300,15 +301,15 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 601232972}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 5611.844}
-  m_LocalScale: {x: 623.53827, y: 623.53827, z: 623.53827}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 2057158023}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 2968, y: 1080}
+  m_AnchoredPosition: {x: 5.786133, y: 3.3093262}
   m_SizeDelta: {x: 3.7600098, y: 3.9200134}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &601232975
@@ -603,7 +604,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Name
+  m_Text: Text
 --- !u!222 &1428757819
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -683,7 +684,7 @@ RectTransform:
   - {fileID: 1428757817}
   - {fileID: 167237789}
   m_Father: {fileID: 2057158023}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -871,10 +872,9 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 601232974}
   - {fileID: 1898389405}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -941,5 +941,5 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

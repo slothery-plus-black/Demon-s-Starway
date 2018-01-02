@@ -102,9 +102,7 @@ public class LobbyPersonalizado : NetworkLobbyManager {
 		r.enabled = false;
 		c.enabled = false;
 
-		if (!texto.text.Equals("")){
-			partida = texto.text;
-		}
+		partida = texto.text;
 
 		Buscar();
 		

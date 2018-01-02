@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.091069646, g: 0.12492166, b: 0.1924493, a: 1}
+  m_IndirectSpecularColor: {r: 0.054222144, g: 0.08006757, b: 0.13219851, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -2017,6 +2017,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dc78d1d3f1223b64a98576cb7b7d0049, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &853737847 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4465715767104582, guid: 4698ac8677b137b4a854e14cda07bed6,
+    type: 2}
+  m_PrefabInternal: {fileID: 1529177201}
 --- !u!1001 &918407190
 Prefab:
   m_ObjectHideFlags: 0
@@ -2579,6 +2584,93 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
+--- !u!1 &1424992721
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1813780624465862, guid: 4698ac8677b137b4a854e14cda07bed6,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1424992722}
+  - component: {fileID: 1424992725}
+  - component: {fileID: 1424992724}
+  - component: {fileID: 1424992723}
+  m_Layer: 0
+  m_Name: Cesped (4)
+  m_TagString: suelo
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1424992722
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4075034251858780, guid: 4698ac8677b137b4a854e14cda07bed6,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1424992721}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0.7071068, w: -0}
+  m_LocalPosition: {x: 0.013, y: -1.496, z: 0.455}
+  m_LocalScale: {x: 0.91766083, y: 0.8732107, z: 1.0000008}
+  m_Children: []
+  m_Father: {fileID: 853737847}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 270, y: 0, z: -180}
+--- !u!65 &1424992723
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 65189841170550666, guid: 4698ac8677b137b4a854e14cda07bed6,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1424992721}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.92337584, y: 0.93648946, z: 0.025399923}
+  m_Center: {x: 0.0158789, y: -0.0082131475, z: 2.0127}
+--- !u!23 &1424992724
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 23151241474730528, guid: 4698ac8677b137b4a854e14cda07bed6,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1424992721}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: f57242e62c90ee1438f78efeab1c2bc0, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1424992725
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 33560173384070032, guid: 4698ac8677b137b4a854e14cda07bed6,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1424992721}
+  m_Mesh: {fileID: 4300002, guid: 8af3a28a2d30398469297999953677c0, type: 3}
 --- !u!1001 &1517099827
 Prefab:
   m_ObjectHideFlags: 0

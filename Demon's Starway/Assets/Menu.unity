@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.11095277, g: 0.15211868, b: 0.2316772, a: 1}
+  m_IndirectSpecularColor: {r: 0.19868228, g: 0.2706102, b: 0.3830715, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1435,16 +1435,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fondo: {fileID: 635028205}
-  spriteCambio: {fileID: 21300000, guid: 812effbdebfdf456cacad116fc655e39, type: 3}
-  spriteCambio_eng: {fileID: 21300000, guid: 812effbdebfdf456cacad116fc655e39, type: 3}
+  spriteCambio: {fileID: 21300000, guid: a744b36d504d2db499ab079e572115e1, type: 3}
+  spriteCambio_eng: {fileID: 21300000, guid: a744b36d504d2db499ab079e572115e1, type: 3}
   texto: 1
   textos:
   - {fileID: 403984406}
   - {fileID: 1287929071}
   - {fileID: 2077608394}
   - {fileID: 742376883}
-  textCambio: "EXPLORA EL MUNDO CON EL BOT\xD3N IZQUIERDO DEL RAT\xD3N"
-  textCambio_eng: YOU CAN EXPLORE THE WORLD WITH THE LEFT MOUSE BUTTON
+  textCambio: EXPLORA EL MUNDO CON EL JOYSTICK DERECHO
+  textCambio_eng: YOU CAN EXPLORE THE WORLD WITH THE RIGHT JOYSTICK
 --- !u!1 &204182674
 GameObject:
   m_ObjectHideFlags: 0
@@ -2947,16 +2947,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fondo: {fileID: 635028205}
-  spriteCambio: {fileID: 21300000, guid: 00029cafacd31734e8dfe72eca56d8a1, type: 3}
-  spriteCambio_eng: {fileID: 21300000, guid: e7d3c14c5a7c82f4f918c69dbd0f98be, type: 3}
+  spriteCambio: {fileID: 21300000, guid: 742d59e7d12bd414fa1297f669c8d991, type: 3}
+  spriteCambio_eng: {fileID: 21300000, guid: b3a8b705d6125e04f9a8cb77ec729988, type: 3}
   texto: 2
   textos:
   - {fileID: 403984406}
   - {fileID: 1287929071}
   - {fileID: 2077608394}
   - {fileID: 742376883}
-  textCambio: MUEVE EL PERSONAJE CON LAS TECLAS A,S,D y W
-  textCambio_eng: YOU CAN MOVE ARROUND WITH A,S,D,W KEYS
+  textCambio: MUEVE EL PERSONAJE CON EL JOYSTICK IZQUIERDO Y SALTA CON LA BARRA
+  textCambio_eng: YOU CAN MOVE ARROUND WITH THE LEFT JOYSTICK AND JUMP WITH THE SPACEBAR
 --- !u!1 &490756855
 GameObject:
   m_ObjectHideFlags: 0
@@ -8346,7 +8346,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "EXPLORA EL MUNDO CON EL BOT\xD3N IZQUIERDO DEL RAT\xD3N"
+  m_Text: EXPLORA EL MUNDO CON EL JOYSTICK DERECHO
 --- !u!222 &1287929074
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8364,8 +8364,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfeaa527db6508b418ee6518362ecaec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textoOriginal: "EXPLORA EL MUNDO CON EL BOT\xD3N IZQUIERDO DEL RAT\xD3N"
-  textoEng: YOU CAN EXPLORE THE WORLD WITH THE LEFT MOUSE BUTTON
+  textoOriginal: EXPLORA EL MUNDO CON EL JOYSTICK DERECHO
+  textoEng: YOU CAN EXPLORE THE WORLD WITH THE RIGHT JOYSTICK
 --- !u!1 &1293048034
 GameObject:
   m_ObjectHideFlags: 0
@@ -13209,7 +13209,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: MUEVE EL PERSONAJE CON LAS TECLAS A,S,D y W
+  m_Text: MUEVE EL PERSONAJE CON EL JOYSTICK IZQUIERDO Y SALTA CON LA BARRA
 --- !u!222 &2077608397
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13227,8 +13227,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfeaa527db6508b418ee6518362ecaec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textoOriginal: MUEVE EL PERSONAJE CON LAS TECLAS A,S,D y W
-  textoEng: YOU CAN MOVE ARROUND WITH A,S,D,W KEYS
+  textoOriginal: MUEVE EL PERSONAJE CON EL JOYSTICK IZQUIERDO Y SALTA CON LA BARRA
+  textoEng: YOU CAN MOVE ARROUND WITH THE LEFT JOYSTICK AND JUMP WITH THE SPACEBAR
 --- !u!1 &2083502325
 GameObject:
   m_ObjectHideFlags: 0

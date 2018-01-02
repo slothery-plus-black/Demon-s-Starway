@@ -1,0 +1,9 @@
+{
+"TOTAL_MEMORY": 268435456,
+"dataUrl": "webMovil v1.0.data.unityweb",
+"asmCodeUrl": "webMovil v1.0.asm.code.unityweb",
+"asmMemoryUrl": "webMovil v1.0.asm.memory.unityweb",
+"asmFrameworkUrl": "webMovil v1.0.asm.framework.unityweb",
+"splashScreenStyle": "Dark",
+"backgroundColor": "#222C36"
+}

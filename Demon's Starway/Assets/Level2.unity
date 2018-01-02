@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.14876842, g: 0.21657938, b: 0.31120846, a: 1}
+  m_IndirectSpecularColor: {r: 0.11095277, g: 0.15211868, b: 0.2316772, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -963,6 +963,7 @@ GameObject:
   - component: {fileID: 265349311}
   - component: {fileID: 265349313}
   - component: {fileID: 265349312}
+  - component: {fileID: 265349314}
   m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
@@ -1027,6 +1028,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 265349310}
+--- !u!114 &265349314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 265349310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfeaa527db6508b418ee6518362ecaec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textoOriginal: SALIR
+  textoEng: EXIT
 --- !u!1001 &302287358
 Prefab:
   m_ObjectHideFlags: 0
@@ -2459,7 +2473,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 690347138}
-  m_LocalRotation: {x: -0.0018630025, y: 0.10511886, z: 0.6660556, w: 0.7384556}
+  m_LocalRotation: {x: -0.0018630023, y: 0.10511885, z: 0.66605556, w: 0.73845553}
   m_LocalPosition: {x: -447, y: 203.9, z: -55.4}
   m_LocalScale: {x: 9.154328, y: 9.154329, z: 0}
   m_Children:

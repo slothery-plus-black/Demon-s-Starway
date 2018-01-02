@@ -25,6 +25,7 @@ public class ReproductorSonidos : MonoBehaviour {
 		if (GameObject.FindGameObjectsWithTag("reproductor").Length <= 1){
 			au = GetComponent<AudioSource>();
 			DontDestroyOnLoad(gameObject);
+			CambiarSonidoFondo(CargadorEscenas.CogerNombreEscenaActual());
 			au.Play();
 		}
 		else{
@@ -49,12 +50,15 @@ public class ReproductorSonidos : MonoBehaviour {
 
 	public void CambiarSonidoOnOff(){
 		switch(PlayerPrefs.GetString("sonido","on")){
+			case "on":
+				if (au.isPlaying)
+					au.Stop();
+				CambiarSonidoFondo(CargadorEscenas.CogerNombreEscenaActual());
+				au.Play();
+				break;
 			case "off":
 				au.Stop();
-				break;
-			case "on":
-				au.Stop();
-				CambiarSonidoFondo(CargadorEscenas.CogerNombreEscenaActual());
+				//CambiarSonidoFondo(CargadorEscenas.CogerNombreEscenaActual());
 				break;
 		}
 	}

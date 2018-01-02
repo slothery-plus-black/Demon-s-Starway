@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.091075934, g: 0.12511972, b: 0.1936813, a: 1}
+  m_IndirectSpecularColor: {r: 0.19869009, g: 0.2706146, b: 0.3830745, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -359,7 +359,7 @@ MonoBehaviour:
   m_ShowLobbyGUI: 1
   m_MaxPlayers: 2
   m_MaxPlayersPerConnection: 1
-  m_MinPlayers: 0
+  m_MinPlayers: 2
   m_LobbyPlayerPrefab: {fileID: 114202711580067272, guid: 67cf0ce9036c6104dbf02ea513958847,
     type: 2}
   m_GamePlayerPrefab: {fileID: 1460635272845092, guid: 31ca0c60a4798964db52f71ea9e9a6b9,

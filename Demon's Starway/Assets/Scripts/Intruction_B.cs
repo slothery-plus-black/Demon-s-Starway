@@ -15,11 +15,11 @@ public class Intruction_B : MonoBehaviour {
 	}
 
 	void OnMouseDown(){
-		transform.GetChild(0).gameObject.SetActive(true);
+		transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().enabled = true;
 	}
 
 	void OnMouseUp(){
-		transform.GetChild(0).gameObject.SetActive(false);
+		transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().enabled = false;
 		//cambiar imagenes de instrucciones
 	}
 }

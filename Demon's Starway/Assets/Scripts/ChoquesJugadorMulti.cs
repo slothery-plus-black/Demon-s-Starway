@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.Networking.NetworkSystem;
 
 public class ChoquesJugadorMulti : NetworkBehaviour {
 
+	public static short clientID = 123;
 	//PuntasEstrella puntas = new PuntasEstrella();
 	//VidasMulti vidas;
 
@@ -20,6 +22,9 @@ public class ChoquesJugadorMulti : NetworkBehaviour {
 	public GameObject salida;
 
 	NetworkLobbyManager manager;
+
+	GameObject[] jugadores;
+	bool cargaJugadores = false;
 
 	//ReproductorSonidos sonidos;
 	
@@ -77,6 +82,16 @@ public class ChoquesJugadorMulti : NetworkBehaviour {
 
 			//CargadorEscenas.CargaEscenaAsync("multiFinal");
 		}
+
+		jugadores = GameObject.FindGameObjectsWithTag("Player");
+		//print("Jugadores: "+jugadores);
+
+		if (jugadores.Length >= 2){
+			cargaJugadores = true;
+		}
+		/*if (cargaJugadores && jugadores < 2){
+			Desconectar(0);
+		}*/
 	}
 
 	void ComprobarEnemigo(GameObject other){
@@ -112,12 +127,19 @@ public class ChoquesJugadorMulti : NetworkBehaviour {
 				//print(vidas.GetPuntas());
 			if (other.gameObject.tag.ToLower().Equals("salida")){
 				if (puntas.GetPuntas() >= 5){
-					
-					CargadorEscenas.CargaEscenaAsync("multiFinal");
-					//Network.Disconnect ();
-					
-					Destroy(GameObject.Find("LobbyPlayer(Clone)").gameObject);
-					Destroy (manager.gameObject);
+					/*MessageBase message;
+					NetworkMessage msg = new NetworkMessage();
+
+					msg.msgType = clientID;
+					msg.
+
+					NetworkServer.SendToAll(clientID,)*/
+
+					/*sonidos.SetGanador(1);
+					foreach (GameObject o in jugadores){
+						o.GetComponent<ChoquesJugadorMulti>().Desconectar();
+					}*/
+					//Desconectar(1);
 				}
 			}
 
@@ -145,16 +167,51 @@ public class ChoquesJugadorMulti : NetworkBehaviour {
 		
 	}
 
-	void OnDisconnectedFromServer(NetworkDisconnection info) {
-        if (Network.isServer)
-            Debug.Log("Local server connection disconnected");
-        else
-            if (info == NetworkDisconnection.LostConnection)
-                Debug.Log("Lost connection to the server");
-            else
-                Debug.Log("Successfully diconnected from the server");
+	/*void Desconectar(int n){
+		sonidos.SetGanador(n);
+		
+		//Network.Disconnect ();
+		foreach (GameObject o in GameObject.FindObjectsOfType(typeof (NetworkLobbyPlayer))){
+			Destroy(o);
+		}
+		Destroy (manager.gameObject);
+		gameObject.tag = "Untagged";
 
-		//CargadorEscenas.CargaEscenaAsync("multiFinal");
+		CargadorEscenas.CargaEscenaAsync("multiFinal");
+	}
+
+	void Desconectar(){
+		//sonidos.SetGanador(n);
+		
+		//Network.Disconnect ();
+		foreach (NetworkLobbyPlayer o in GameObject.FindObjectsOfType(typeof (NetworkLobbyPlayer))){
+			Destroy(o.gameObject);
+		}
+		Destroy (manager.gameObject);
+		//gameObject.tag = "Untagged";
+
+		CargadorEscenas.CargaEscenaAsync("multiFinal");
+	}*/
+	const short MyBeginMsg = 1002;
+
+    NetworkClient m_client;
+
+    public void SendReadyToBeginMessage(int myId)
+    {
+        var msg = new IntegerMessage(myId);
+        m_client.Send(MyBeginMsg, msg);
+    }
+
+    public void Init(NetworkClient client)
+    {
+        m_client = client;
+        NetworkServer.RegisterHandler(MyBeginMsg, OnServerReadyToBeginMessage);
+    }
+
+    void OnServerReadyToBeginMessage(NetworkMessage netMsg)
+    {
+        var beginMessage = netMsg.ReadMessage<IntegerMessage>();
+        Debug.Log("received OnServerReadyToBeginMessage " + beginMessage.value);
     }
 
 	void OnCollisionEnter(Collision other){

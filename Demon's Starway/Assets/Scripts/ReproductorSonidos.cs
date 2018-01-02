@@ -6,6 +6,8 @@ using UnityEngine;
 public class ReproductorSonidos : MonoBehaviour {
 	AudioSource au;
 
+	int ganadorMulti = -1;
+
 	public AudioClip sonidoSpawn;
 	public AudioClip sonidoSalto;
 	public AudioClip[] sonidoPuntaEstrella;
@@ -122,5 +124,13 @@ public class ReproductorSonidos : MonoBehaviour {
 	public void ReproducirSonidoRuleta(){
 		if (HaySonido())
 			au.PlayOneShot(sonidoRuleta);
+	}
+
+	public void SetGanador(int n){
+		ganadorMulti = n;
+	}
+
+	public int GetGanador(){
+		return ganadorMulti;
 	}
 }

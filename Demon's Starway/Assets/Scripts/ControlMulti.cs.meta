@@ -1,10 +1,13 @@
 fileFormatVersion: 2
 guid: 6f81256ff363562488aa43da398baa45
-timeCreated: 1514553187
+timeCreated: 1514855889
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - bichoMulti: {fileID: 2100000, guid: c38704b796a02b34abb34e2f511c78ab, type: 2}
+  - planeta: {instanceID: 0}
+  - joystickMovimiento: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

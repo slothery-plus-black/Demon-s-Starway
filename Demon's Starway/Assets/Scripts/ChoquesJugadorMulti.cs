@@ -89,9 +89,9 @@ public class ChoquesJugadorMulti : NetworkBehaviour {
 		if (jugadores.Length >= 2){
 			cargaJugadores = true;
 		}
-		/*if (cargaJugadores && jugadores < 2){
-			Desconectar(0);
-		}*/
+		if (cargaJugadores && jugadores.Length < 2){
+			CargadorEscenas.CargaEscenaAsync("LobbyMultijugador");
+		}
 	}
 
 	void ComprobarEnemigo(GameObject other){

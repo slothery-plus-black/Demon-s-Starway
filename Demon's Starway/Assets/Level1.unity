@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17097527, g: 0.24501598, b: 0.35312435, a: 1}
+  m_IndirectSpecularColor: {r: 0.050826818, g: 0.07657864, b: 0.12766239, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -4581,53 +4581,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a3e496a2520640f4b981df936e45c88b, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1956108048
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1956108050}
-  - component: {fileID: 1956108049}
-  m_Layer: 0
-  m_Name: ControladorCamaras
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1956108049
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1956108048}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd795efe8363841609b8d5caf64e3566, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camara1: {fileID: 681305444}
-  MainCamara: {fileID: 596701822}
-  vidas: {fileID: 1613089291}
-  scriptAngel: {fileID: 0}
-  CountdownFrom: 12
-  velTransicion: 1
-  nombreNvl: {fileID: 1293607493}
---- !u!4 &1956108050
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1956108048}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.4874415, y: 0.3562522, z: -0.542511}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 34
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1964690380
 Prefab:
   m_ObjectHideFlags: 0
@@ -5020,6 +4973,68 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dc78d1d3f1223b64a98576cb7b7d0049, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &2098449604
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4564718289514794, guid: bcae70888d36041ebbfc733275305a47, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -4.4874415
+      objectReference: {fileID: 0}
+    - target: {fileID: 4564718289514794, guid: bcae70888d36041ebbfc733275305a47, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.3562522
+      objectReference: {fileID: 0}
+    - target: {fileID: 4564718289514794, guid: bcae70888d36041ebbfc733275305a47, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.542511
+      objectReference: {fileID: 0}
+    - target: {fileID: 4564718289514794, guid: bcae70888d36041ebbfc733275305a47, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4564718289514794, guid: bcae70888d36041ebbfc733275305a47, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4564718289514794, guid: bcae70888d36041ebbfc733275305a47, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4564718289514794, guid: bcae70888d36041ebbfc733275305a47, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4564718289514794, guid: bcae70888d36041ebbfc733275305a47, type: 2}
+      propertyPath: m_RootOrder
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 114310400200563980, guid: bcae70888d36041ebbfc733275305a47,
+        type: 2}
+      propertyPath: camara1
+      value: 
+      objectReference: {fileID: 681305444}
+    - target: {fileID: 114310400200563980, guid: bcae70888d36041ebbfc733275305a47,
+        type: 2}
+      propertyPath: MainCamara
+      value: 
+      objectReference: {fileID: 596701822}
+    - target: {fileID: 114310400200563980, guid: bcae70888d36041ebbfc733275305a47,
+        type: 2}
+      propertyPath: vidas
+      value: 
+      objectReference: {fileID: 1613089291}
+    - target: {fileID: 114310400200563980, guid: bcae70888d36041ebbfc733275305a47,
+        type: 2}
+      propertyPath: nombreNvl
+      value: 
+      objectReference: {fileID: 1293607493}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: bcae70888d36041ebbfc733275305a47, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &2124773689
 Prefab:

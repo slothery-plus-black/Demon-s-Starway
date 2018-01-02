@@ -230,7 +230,7 @@ MonoBehaviour:
   m_GamePlayerPrefab: {fileID: 1460635272845092, guid: 31ca0c60a4798964db52f71ea9e9a6b9,
     type: 2}
   m_LobbyScene: LobbyMultijugador
-  m_PlayScene: prueba multi
+  m_PlayScene: multi
   lobbySlots: []
 --- !u!4 &178959666
 Transform:

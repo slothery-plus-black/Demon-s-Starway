@@ -23,6 +23,7 @@ public class ReproductorSonidos : MonoBehaviour {
 		if (GameObject.FindGameObjectsWithTag("reproductor").Length <= 1){
 			au = GetComponent<AudioSource>();
 			DontDestroyOnLoad(gameObject);
+			au.Play();
 		}
 		else{
 			Destroy(gameObject);

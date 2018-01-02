@@ -6,6 +6,7 @@ using UnityEngine.Networking.NetworkSystem;
 
 public class ChoquesJugadorMulti : NetworkBehaviour {
 
+	public static short clientID = 123;
 	//PuntasEstrella puntas = new PuntasEstrella();
 	//VidasMulti vidas;
 
@@ -126,8 +127,13 @@ public class ChoquesJugadorMulti : NetworkBehaviour {
 				//print(vidas.GetPuntas());
 			if (other.gameObject.tag.ToLower().Equals("salida")){
 				if (puntas.GetPuntas() >= 5){
+					/*MessageBase message;
+					NetworkMessage msg = new NetworkMessage();
 
-					SendReadyToBeginMessage(0);
+					msg.msgType = clientID;
+					msg.
+
+					NetworkServer.SendToAll(clientID,)*/
 
 					/*sonidos.SetGanador(1);
 					foreach (GameObject o in jugadores){

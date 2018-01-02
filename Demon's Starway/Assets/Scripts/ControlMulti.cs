@@ -6,6 +6,8 @@ using System;
 
 public class ControlMulti : NetworkBehaviour {
 
+	public Material bichoMulti;
+
 	ReproductorSonidos sonidos = null;
 
 	bool muerte = false;
@@ -40,9 +42,10 @@ public class ControlMulti : NetworkBehaviour {
 		r.maxDepenetrationVelocity = 8;
 
 		if (isLocalPlayer){
-			Renderer rend = transform.GetChild(0).GetChild(2).GetComponent<Renderer>();
-			//transform.GetChild(0).GetChild(2).GetComponent<Renderer>();
-			rend.material = Resources.Load<Material>("BichoMulti");
+			Renderer rend = transform.GetChild(0).GetChild(0).GetComponent<Renderer>();
+			rend.material = bichoMulti;
+			rend = transform.GetChild(0).GetChild(1).GetComponent<Renderer>();
+			rend.material = bichoMulti;
 		}
 
 		sonidos = GameObject.FindGameObjectWithTag("reproductor").GetComponent<ReproductorSonidos>();

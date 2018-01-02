@@ -62,7 +62,7 @@ GameObject:
   - component: {fileID: 114579422362048470}
   m_Layer: 0
   m_Name: jugadorMulti
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -213,7 +213,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 7dd4b480595d43a4f8b4dcce6fe02007, type: 2}
+  - {fileID: 2100000, guid: c38704b796a02b34abb34e2f511c78ab, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -245,7 +245,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 7dd4b480595d43a4f8b4dcce6fe02007, type: 2}
+  - {fileID: 2100000, guid: c38704b796a02b34abb34e2f511c78ab, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -277,7 +277,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 7dd4b480595d43a4f8b4dcce6fe02007, type: 2}
+  - {fileID: 2100000, guid: c38704b796a02b34abb34e2f511c78ab, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -309,7 +309,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 7dd4b480595d43a4f8b4dcce6fe02007, type: 2}
+  - {fileID: 2100000, guid: c38704b796a02b34abb34e2f511c78ab, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -438,6 +438,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ba70eb2abd785c45bb9843dddd7e93f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  salida: {fileID: 0}
 --- !u!114 &114579422362048470
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -470,6 +471,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f81256ff363562488aa43da398baa45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bichoMulti: {fileID: 2100000, guid: 7dd4b480595d43a4f8b4dcce6fe02007, type: 2}
   planeta: {fileID: 0}
   fuerzaMovimiento: 10
   fuerzaMovimientoEnAire: 2.5

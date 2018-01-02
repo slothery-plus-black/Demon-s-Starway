@@ -57,7 +57,7 @@ public class GravedadPorPartesMulti : NetworkBehaviour {
 	}
 
 	void OnTriggerEnter (Collider col){
-		if (col.gameObject.tag.Equals("Player")){
+		/*if (col.gameObject.tag.Equals("Player")){
 			Renderer rend = col.gameObject.GetComponent<Renderer>();
 			if (rend.material.color.Equals(Color.red)){
 				objects.Add(col.gameObject);
@@ -65,7 +65,9 @@ public class GravedadPorPartesMulti : NetworkBehaviour {
 		}else{
 			if (!col.gameObject.tag.Equals("enemigo"))
 			objects.Add (col.gameObject);
-		}
+		}*/
+
+		objects.Add(col.gameObject);
 		
 	}
 
@@ -75,15 +77,17 @@ public class GravedadPorPartesMulti : NetworkBehaviour {
 		}else{*/
 			
 		//Debug.Log(rend.material.color);
-		if (col.gameObject.tag.Equals("Player")){
+		/*if (col.gameObject.tag.Equals("Player")){
 			Renderer rend = col.gameObject.GetComponent<Renderer>();
 			if (rend.material.color.Equals(Color.red)){
 				objects.Remove(col.gameObject);
 			}
 		}else{
 			objects.Remove (col.gameObject);
-		}
+		}*/
 		
+
+		objects.Remove (col.gameObject);
 	}
 
 }

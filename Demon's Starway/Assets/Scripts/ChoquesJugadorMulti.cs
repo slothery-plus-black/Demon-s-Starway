@@ -136,6 +136,7 @@ public class ChoquesJugadorMulti : NetworkBehaviour {
 					NetworkServer.SendToAll(clientID,)*/
 
 					CargadorEscenas.CargaEscenaAsync("LobbyMultijugador");
+					Network.Disconnect();
 
 					/*sonidos.SetGanador(1);
 					foreach (GameObject o in jugadores){

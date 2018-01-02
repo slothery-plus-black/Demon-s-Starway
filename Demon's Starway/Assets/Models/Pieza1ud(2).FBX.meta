@@ -19,6 +19,7 @@ ModelImporter:
     3300004: Cesped002
     4300000: Box002
     4300002: Cesped002
+    7400000: Take 001
     9500000: //RootNode
   materials:
     importMaterials: 1

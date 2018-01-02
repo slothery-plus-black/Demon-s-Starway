@@ -31,7 +31,8 @@ public class ReproductorSonidos : MonoBehaviour {
 			//GameObject[] repro =  GameObject.FindGameObjectsWithTag("reproductor");
 
 			foreach (GameObject o in GameObject.FindGameObjectsWithTag("reproductor")){
-				o.GetComponent<ReproductorSonidos>().CambiarSonidoFondo(CargadorEscenas.CogerNombreEscenaActual());
+				if (o != gameObject)
+					o.GetComponent<ReproductorSonidos>().CambiarSonidoFondo(CargadorEscenas.CogerNombreEscenaActual());
 			}
 			Destroy(gameObject);
 		}
@@ -70,6 +71,7 @@ public class ReproductorSonidos : MonoBehaviour {
 			switch (nivel){
 				case "menu":
 				case "lobbymultijugador":
+				case "lobbypersonalizado":
 					au.clip = sonidoMenu;
 					break;
 				case "level1":

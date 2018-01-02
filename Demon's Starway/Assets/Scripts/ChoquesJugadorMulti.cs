@@ -71,7 +71,7 @@ public class ChoquesJugadorMulti : NetworkBehaviour {
 	void Update () {
 		//print(vidas.GetPuntas());
 		//print(posInicialCamara.position);
-		if (Input.GetKeyDown("f")){
+		/*if (Input.GetKeyDown("f")){
 			CargadorEscenas.CargaEscenaAsync("multiFinal");
 			//Network.Disconnect ();
 			
@@ -81,7 +81,7 @@ public class ChoquesJugadorMulti : NetworkBehaviour {
 			//manager.StopAllCoroutines();
 
 			//CargadorEscenas.CargaEscenaAsync("multiFinal");
-		}
+		}*/
 
 		jugadores = GameObject.FindGameObjectsWithTag("Player");
 		//print("Jugadores: "+jugadores);

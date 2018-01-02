@@ -5,7 +5,7 @@ using UnityEngine;
 public class CambiarIdioma : MonoBehaviour {
 
 	int numIdiomas = 2;
-	string[] idiomas = new string[] {"esp","eng"};
+	//string[] idiomas = new string[] {"esp","eng"};
 	int n = 0;
 
 	// Use this for initialization

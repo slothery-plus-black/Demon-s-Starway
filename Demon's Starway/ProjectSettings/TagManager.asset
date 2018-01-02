@@ -13,6 +13,7 @@ TagManager:
   - vidas
   - gravedadCircular
   - idioma
+  - lobby
   layers:
   - Default
   - TransparentFX

@@ -7,6 +7,7 @@ using UnityEngine.Networking.Match;
 public class LobbyPersonalizado : NetworkLobbyManager {
 
 	SpriteRenderer r;
+	Collider2D c;
 
 	void Awake(){
 		if (GameObject.FindGameObjectsWithTag("lobby").Length > 1){
@@ -14,6 +15,7 @@ public class LobbyPersonalizado : NetworkLobbyManager {
 		}
 
 		r = GetComponent<SpriteRenderer>();
+		c= GetComponent<Collider2D>();
 	}
 
 	// Use this for initialization
@@ -96,6 +98,7 @@ public class LobbyPersonalizado : NetworkLobbyManager {
 
 	void OnMouseDown(){
 		r.enabled = false;
+		c.enabled = false;
 		Buscar();
 	}
 }

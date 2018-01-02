@@ -9,13 +9,12 @@ public class RoulletePos : MonoBehaviour {
 	private bool Up = false;
 	private bool Down = false;
 	Rigidbody2D roulleteRb;
-	GameObject Bicho;
+	public GameObject Bicho;
 	Quaternion FirstPosBicho;
 
 	// Use this for initialization
 	void Start () {
 		roulleteRb = gameObject.GetComponent<Rigidbody2D> ();
-		Bicho = GameObject.Find("Bicho");
 		FirstPosBicho = Bicho.transform.rotation;
 	}
 	

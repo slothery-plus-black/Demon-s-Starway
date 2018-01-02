@@ -91,11 +91,7 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-<<<<<<< HEAD
-    - _Rotation: 2688.3115
-=======
-    - _Rotation: 373.69666
->>>>>>> ca2ed47820b1081a677ca72cf4641c93973724e0
+    - _Rotation: 360
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1

@@ -7,8 +7,6 @@ public class CargaIdiomaTexto : MonoBehaviour {
 	public string textoOriginal;
 	public string textoEng;
 
-	string spriteOriginal;
-
 	void Awake () {
 		//spriteOriginal = GetComponent<SpriteRenderer>().sprite.name;
 		Cargar();
@@ -25,12 +23,12 @@ public class CargaIdiomaTexto : MonoBehaviour {
 			break;
 
 			case "eng":
-				temp = spriteOriginal+"_eng";
+				temp = textoEng;
 			break;
 		}
 
 		//Debug.Log(temp);
-
+		GetComponent<UnityEngine.UI.Text>().text = temp;
 		spr.sprite = Resources.Load<Sprite>(temp);
 	}
 }

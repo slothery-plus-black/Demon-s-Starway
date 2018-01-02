@@ -6,7 +6,7 @@ using UnityEngine.Networking.NetworkSystem;
 
 public class ChoquesJugadorMulti : NetworkBehaviour {
 
-	public static short clientID = 123;
+	//public static short clientID = 123;
 	//PuntasEstrella puntas = new PuntasEstrella();
 	//VidasMulti vidas;
 
@@ -90,7 +90,8 @@ public class ChoquesJugadorMulti : NetworkBehaviour {
 			cargaJugadores = true;
 		}
 		if (cargaJugadores && jugadores.Length < 2){
-			CargadorEscenas.CargaEscenaAsync("LobbyMultijugador");
+			//CargadorEscenas.CargaEscenaAsync("LobbyMultijugador");
+			manager.SendReturnToLobby();
 		}
 	}
 
@@ -134,8 +135,9 @@ public class ChoquesJugadorMulti : NetworkBehaviour {
 					msg.
 
 					NetworkServer.SendToAll(clientID,)*/
-					manager.StopMatchMaker();
-					CargadorEscenas.CargaEscenaAsync("LobbyMultijugador");
+					//manager.StopMatchMaker();
+					manager.SendReturnToLobby();
+					//CargadorEscenas.CargaEscenaAsync("LobbyMultijugador");
 					//Network.Disconnect();
 
 					/*sonidos.SetGanador(1);

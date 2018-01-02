@@ -28,6 +28,11 @@ public class ReproductorSonidos : MonoBehaviour {
 			au.Play();
 		}
 		else{
+			//GameObject[] repro =  GameObject.FindGameObjectsWithTag("reproductor");
+
+			foreach (GameObject o in GameObject.FindGameObjectsWithTag("reproductor")){
+				o.GetComponent<ReproductorSonidos>().CambiarSonidoFondo(CargadorEscenas.CogerNombreEscenaActual());
+			}
 			Destroy(gameObject);
 		}
 	}
@@ -70,6 +75,7 @@ public class ReproductorSonidos : MonoBehaviour {
 				case "level1":
 				case "level2":
 				case "level3":
+				case "multi":
 					au.clip = sonidoNivel;
 					break;
 			}

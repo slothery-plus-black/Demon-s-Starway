@@ -32,3 +32,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/multiFinal.unity
     guid: c38e0b28c5752c44bb73626b1a9c63fd
+  - enabled: 1
+    path: Assets/LobbyPersonalizado.unity
+    guid: 96c211d0abf7c084581fed04f59599cf

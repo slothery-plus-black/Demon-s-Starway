@@ -71,6 +71,7 @@ public class ReproductorSonidos : MonoBehaviour {
 			switch (nivel){
 				case "menu":
 				case "lobbymultijugador":
+				case "lobbypersonalizado":
 					au.clip = sonidoMenu;
 					break;
 				case "level1":

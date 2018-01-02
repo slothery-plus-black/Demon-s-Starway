@@ -8,6 +8,10 @@ public class LobbyPersonalizado : NetworkLobbyManager {
 
 	// Use this for initialization
 	void Start () {
+		//Buscar();
+	}
+
+	void Buscar(){
 		MMStart();
 		MMListMatches();
 	}
@@ -78,5 +82,9 @@ public class LobbyPersonalizado : NetworkLobbyManager {
 			//success
 			print("created match: "+matchInfo.networkId);
 		}
+	}
+
+	void OnMouseDown(){
+		Buscar();
 	}
 }

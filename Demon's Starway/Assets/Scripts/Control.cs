@@ -53,7 +53,7 @@ public class Control : MonoBehaviour {
 		if (!muerte){
 			bool tecla = false;
 
-			#if UNITY_IPHONE || UNITY_ANDROID || UNITY_WEBGL
+			#if UNITY_IPHONE || UNITY_ANDROID
 				float h = joystickMovimiento.Horizontal();
 				float v = joystickMovimiento.Vertical();
 

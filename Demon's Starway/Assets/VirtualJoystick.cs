@@ -39,6 +39,7 @@ public class VirtualJoystick : MonoBehaviour, IDragHandler, IPointerUpHandler, I
 	}
 
 	public virtual void OnPointerDown(PointerEventData ped){
+		print("point");
 		OnDrag(ped);
 	}
 
